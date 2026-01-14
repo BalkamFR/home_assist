@@ -1,0 +1,778 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace",
+  "data": {
+    "config": {
+      "title": "Maison Mushroom V12",
+      "views": [
+        {
+          "title": "Vue Design",
+          "path": "vue-design",
+          "icon": "mdi:home-assistant",
+          "background": "#1c1c1c",
+          "type": "masonry",
+          "cards": [
+            {
+              "type": "custom:mushroom-chips-card",
+              "chips": [
+                {
+                  "type": "weather",
+                  "entity": "weather.forecast_home",
+                  "show_conditions": true,
+                  "show_temperature": true
+                },
+                {
+                  "type": "entity",
+                  "entity": "sensor.0xa4c138e86f6207da_temperature",
+                  "icon": "mdi:thermometer",
+                  "content_info": "state"
+                },
+                {
+                  "type": "entity",
+                  "entity": "switch.freebox_wifi",
+                  "icon": "mdi:wifi",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                }
+              ],
+              "alignment": "center"
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "🏡 Espace de Vie",
+                  "subtitle": "Cuisine & Salon"
+                },
+                {
+                  "type": "custom:mushroom-media-player-card",
+                  "entity": "media_player.piece_a_vivre",
+                  "name": "Musique Cuisine",
+                  "use_media_info": true,
+                  "show_volume_level": true,
+                  "volume_controls": [
+                    "volume_set"
+                  ],
+                  "fill_container": true
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumieres_cuisine",
+                      "name": "Cuisine",
+                      "icon": "mdi:dome-light",
+                      "show_brightness_control": true,
+                      "use_light_color": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumieres_bar",
+                      "name": "Bar",
+                      "icon": "mdi:glass-cocktail",
+                      "show_brightness_control": true,
+                      "use_light_color": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-entity-card",
+                      "entity": "switch.lampe_evier",
+                      "name": "Évier",
+                      "icon": "mdi:water-pump",
+                      "tap_action": {
+                        "action": "toggle"
+                      }
+                    },
+                    {
+                      "type": "custom:mushroom-entity-card",
+                      "entity": "switch.salle_a_manger",
+                      "name": "Table",
+                      "icon": "mdi:table-furniture",
+                      "tap_action": {
+                        "action": "toggle"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-cover-card",
+                  "entity": "cover.volet_cuisine_force",
+                  "name": "Volet Cuisine",
+                  "show_buttons_control": true,
+                  "show_position_control": false
+                },
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Salon",
+                  "subtitle": "Détente"
+                },
+                {
+                  "type": "custom:mushroom-media-player-card",
+                  "entity": "media_player.salon",
+                  "use_media_info": true,
+                  "show_volume_level": true
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_salon_tv_2",
+                      "name": "Coin TV",
+                      "show_brightness_control": true,
+                      "use_light_color": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_canape_2",
+                      "name": "Canapé",
+                      "show_brightness_control": true,
+                      "use_light_color": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.light_yaya_salon_2",
+                      "name": "Yaya",
+                      "use_light_color": true,
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_salon_entree",
+                      "name": "Entrée Salon",
+                      "icon": "mdi:door-open",
+                      "show_brightness_control": true,
+                      "use_light_color": true,
+                      "show_color_control": true
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-cover-card",
+                  "entity": "cover.volet_salon_force",
+                  "name": "Volet Salon",
+                  "show_buttons_control": true
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Chambre Pierre"
+                },
+                {
+                  "type": "custom:mushroom-media-player-card",
+                  "entity": "media_player.chambre_pierre",
+                  "name": "Sonos Pierre",
+                  "show_volume_level": true
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.chambre_pierre",
+                  "name": "Plafonnier",
+                  "show_brightness_control": true,
+                  "use_light_color": true,
+                  "show_color_control": true
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_dressing",
+                      "name": "Dressing",
+                      "icon": "mdi:wardrobe",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.0x94deb8fffeb20706",
+                      "name": "Chevet",
+                      "icon": "mdi:lamp",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.0xa46dd4fffe677161",
+                      "name": "Led Sonos",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.0x403059fffef097e2",
+                      "name": "Bureau",
+                      "icon": "mdi:desk-lamp",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.spot_bureau_2",
+                      "name": "Spot 2",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.spot_bureau_3",
+                      "name": "Spot 3",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-cover-card",
+                  "entity": "cover.volet_pierre_force",
+                  "name": "Volet Pierre",
+                  "show_buttons_control": true
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "🧢 Chambre Pacôme"
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.bureau_pacome",
+                      "name": "Bureau",
+                      "icon": "mdi:face-man-profile",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-cover-card",
+                      "entity": "cover.volet_pacome_force",
+                      "name": "Volet",
+                      "show_buttons_control": true
+                    }
+                  ]
+                },
+                {
+                  "type": "grid",
+                  "columns": 3,
+                  "square": true,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.meuble_pacome_2",
+                      "name": "Meuble",
+                      "layout": "vertical",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lampe_yaya_de_pacome",
+                      "name": "Yaya",
+                      "layout": "vertical",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.switch_pacome",
+                      "name": "Switch",
+                      "icon": "mdi:toggle-switch",
+                      "layout": "vertical",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.radiateur_pacome",
+                  "name": "Radiateur Pacôme",
+                  "icon": "mdi:radiator",
+                  "icon_color": "red",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-chips-card",
+                  "chips": [
+                    {
+                      "type": "entity",
+                      "entity": "sensor.0xa4c138e86f6207da_temperature",
+                      "icon": "mdi:thermometer"
+                    },
+                    {
+                      "type": "entity",
+                      "entity": "sensor.0xa4c138e86f6207da_humidity",
+                      "icon": "mdi:water-percent"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "⚽ Chambre Sacha"
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_sacha",
+                      "name": "Plafond",
+                      "icon": "mdi:soccer",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-cover-card",
+                      "entity": "cover.volet_sacha_force",
+                      "name": "Volet",
+                      "show_buttons_control": true
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.bande_sacha",
+                  "name": "LED Sacha",
+                  "icon": "mdi:led-strip-variant",
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "show_color_control": true
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "🌸 Chambre Hanaé"
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.plafond_hanae",
+                      "name": "Plafond",
+                      "icon": "mdi:flower",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-cover-card",
+                      "entity": "cover.volet_hanae_force",
+                      "name": "Volet",
+                      "show_buttons_control": true
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.bande_lumineuse_connectee",
+                  "name": "LED Hanaé",
+                  "icon": "mdi:led-strip",
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "show_color_control": true
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "🎀 Chambre Chiara"
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.lumiere_chiara_1",
+                  "name": "Plafonnier",
+                  "show_brightness_control": true,
+                  "show_color_control": true
+                },
+                {
+                  "type": "grid",
+                  "columns": 3,
+                  "square": true,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_chiara_2",
+                      "name": "Lampe 2",
+                      "layout": "vertical",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_chiara_3",
+                      "name": "Lampe 3",
+                      "layout": "vertical",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-entity-card",
+                      "entity": "switch.radiateur_chiara",
+                      "name": "Rad.",
+                      "icon": "mdi:radiator",
+                      "icon_color": "red",
+                      "layout": "vertical"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "🚿 Salles de Bain"
+                },
+                {
+                  "type": "custom:mushroom-media-player-card",
+                  "entity": "media_player.salle_de_bain",
+                  "name": "Sonos Haut"
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.sdb_haut",
+                      "name": "Haut 1",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.sdb_haut_2",
+                      "name": "Haut 2",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.lumiere_sdb_bas",
+                  "name": "Plafond Bas",
+                  "show_brightness_control": true,
+                  "show_color_control": true
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_sdb_bas_miroir",
+                      "name": "Miroir G",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_sdb_bas_miroir_2",
+                      "name": "Miroir D",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "🧺 Buanderie"
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.0xf0d1b800001b0f66",
+                      "name": "Plafond",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-entity-card",
+                      "entity": "switch.lumiere_buanderie_switch_1",
+                      "name": "Interrupteur",
+                      "tap_action": {
+                        "action": "toggle"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "🎬 Cinéma"
+                },
+                {
+                  "type": "custom:mushroom-media-player-card",
+                  "entity": "media_player.home_cinema",
+                  "show_volume_level": true
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.salle_de_jeux",
+                  "name": "Ambiance",
+                  "show_brightness_control": true,
+                  "use_light_color": true,
+                  "show_color_control": true
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.radiateur_home_cinema",
+                  "name": "Chauffage Ciné",
+                  "icon": "mdi:radiator",
+                  "icon_color": "red",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.video_projecteur_1",
+                      "icon": "mdi:projector-light",
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.video_projecteur_2",
+                      "icon": "mdi:projector-light",
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.video_projecteur_3",
+                      "icon": "mdi:projector-light",
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.video_projecteur_4",
+                      "icon": "mdi:projector-light",
+                      "show_color_control": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "🛏️ Invités"
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_chambre_ami_1",
+                      "name": "Ami 1",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-cover-card",
+                      "entity": "cover.volet_ami_force",
+                      "name": "Volet 1",
+                      "show_buttons_control": true
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.x2d_a1",
+                  "name": "Radiateur Ami 1",
+                  "icon": "mdi:radiator",
+                  "icon_color": "red",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_chambre_ami_2",
+                      "name": "Ami 2",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-cover-card",
+                      "entity": "cover.volet_ami2_force",
+                      "name": "Volet 2",
+                      "show_buttons_control": true
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.x2d_p2",
+                  "name": "Radiateur Ami 2",
+                  "icon": "mdi:radiator",
+                  "icon_color": "red",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "⚡ Divers"
+                },
+                {
+                  "type": "grid",
+                  "columns": 2,
+                  "square": false,
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.inter_couloir",
+                      "name": "Couloir",
+                      "icon": "mdi:walk",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.escalier_bas",
+                      "name": "Escalier",
+                      "icon": "mdi:stairs",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.inter_bas_couloir_haut",
+                      "name": "Couloir Haut",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_3",
+                      "name": "Lumière 3",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-light-card",
+                      "entity": "light.lumiere_5",
+                      "name": "Lumière 5",
+                      "show_brightness_control": true,
+                      "show_color_control": true
+                    },
+                    {
+                      "type": "custom:mushroom-entity-card",
+                      "entity": "switch.prise_1",
+                      "name": "Prise 1",
+                      "tap_action": {
+                        "action": "toggle"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "debug",
+          "path": "debug",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "New section"
+                }
+              ]
+            }
+          ],
+          "badges": [
+            {
+              "type": "entity",
+              "entity": "counter.compteur_scene_salon"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

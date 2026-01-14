@@ -1,0 +1,344 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+cover:
+  - platform: template
+    covers:
+      volet_pacome_force:
+        friendly_name: "Volet All"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C1
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C1
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C1
+            automatic_add: false
+      volet_salon_force:
+        friendly_name: "Volet Salon"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C9
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C9
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C9
+            automatic_add: false
+      volet_pierre_force:
+        friendly_name: "Volet Pierre"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C2
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C2
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C2
+            automatic_add: false
+      volet_hanae_force:
+        friendly_name: "Volet Hanae"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C3
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C3
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C3
+            automatic_add: false
+      volet_sacha_force:
+        friendly_name: "Volet Sacha"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C4
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C4
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C4
+            automatic_add: false
+      volet_cuisine_force:
+        friendly_name: "Volets Cuisine"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C8
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C8
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C8
+            automatic_add: false
+      volet_ami_force:
+        friendly_name: "Volet chambre ami"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C7
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C7
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C7
+            automatic_add: false
+      volet_ami2_force:
+        friendly_name: "Volet chambre ami2"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C6
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C6
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C6
+            automatic_add: false
+
+homekit:
+  # --- PONT 1 : CUISINE & BAR ---
+  - name: HK Cuisine V2
+    port: 21100
+    filter:
+      include_entities:
+        - light.lumieres_cuisine
+        - light.lumieres_bar
+        - switch.lampe_evier
+        - switch.salle_a_manger
+        - cover.volet_cuisine_force
+        - media_player.piece_a_vivre
+
+  # --- PONT 2 : SALON ---
+  - name: HK Salon
+    port: 21065
+    filter:
+      include_entities:
+        - media_player.salon
+        - light.lumiere_salon_tv_2
+        - light.lumiere_salon_entree
+        - light.lumiere_canape_2
+        - light.light_yaya_salon_2
+        - cover.volet_salon_force
+        - switch.salon_night_sound
+        - switch.salon_speech_enhancement
+
+  # --- PONT 3 : SUITE PIERRE ---
+  - name: HK Pierre
+    port: 21066
+    filter:
+      include_entities:
+        - media_player.chambre_pierre
+        - light.chambre_pierre
+        - light.lumiere_dressing
+        - light.0x94deb8fffeb20706
+        - light.0xa46dd4fffe677161
+        - light.0x403059fffef097e2
+        - light.spot_bureau_2
+        - light.spot_bureau_3
+        - cover.volet_pierre_force
+
+  # --- PONT 4 : PACÔME ---
+  - name: HK Pacome
+    port: 21067
+    filter:
+      include_entities:
+        - light.bureau_pacome
+        - cover.volet_pacome_force
+        - light.meuble_pacome_2
+        - light.lampe_yaya_de_pacome
+        - light.switch_pacome
+        - switch.radiateur_pacome
+        - sensor.0xa4c138e86f6207da_temperature
+        - sensor.0xa4c138e86f6207da_humidity
+
+  # --- PONT 5 : SACHA ---
+  - name: HK Sacha
+    port: 21068
+    filter:
+      include_entities:
+        - light.lumiere_sacha
+        - cover.volet_sacha_force
+        - light.bande_sacha
+
+  # --- PONT 6 : HANAÉ ---
+  - name: HK Hanae
+    port: 21069
+    filter:
+      include_entities:
+        - light.plafond_hanae
+        - cover.volet_hanae_force
+        - light.bande_lumineuse_connectee
+
+  # --- PONT 7 : CHIARA ---
+  - name: HK Chiara
+    port: 21070
+    filter:
+      include_entities:
+        - light.lumiere_chiara_1
+        - light.lumiere_chiara_2
+        - light.lumiere_chiara_3
+        - light.lumiere_chiara_4
+        - switch.radiateur_chiara
+
+  # --- PONT 8 : SDB HAUT ---
+  - name: HK SDB Haut
+    port: 21071
+    filter:
+      include_entities:
+        - media_player.salle_de_bain
+        - light.sdb_haut
+        - light.sdb_haut_2
+
+  # --- PONT 9 : SDB BAS ---
+  - name: HK SDB Bas
+    port: 21072
+    filter:
+      include_entities:
+        - media_player.salle_de_bain
+        - light.lumiere_sdb_bas
+        - light.lumiere_sdb_bas_miroir
+        - light.lumiere_sdb_bas_miroir_2
+
+  # --- PONT 10 : BUANDERIE ---
+  - name: HK Buanderie
+    port: 21073
+    filter:
+      include_entities:
+        - light.0xf0d1b800001b0f66
+        - switch.lumiere_buanderie_switch_1
+
+  # --- PONT 11 : CINÉMA ---
+  - name: HK Cinema
+    port: 21074
+    filter:
+      include_entities:
+        - media_player.home_cinema
+        - light.salle_de_jeux
+        - light.video_projecteur_1
+        - light.video_projecteur_2
+        - light.video_projecteur_3
+        - light.video_projecteur_4
+
+  # --- PONT 12 : INVITÉS & COULOIRS ---
+  - name: HK Invites
+    port: 21075
+    filter:
+      include_entities:
+        - light.lumiere_chambre_ami_1
+        - cover.volet_ami_force
+        - switch.x2d_a1
+        - light.lumiere_chambre_ami_2
+        - cover.volet_ami2_force
+        - switch.x2d_p2
+        - light.inter_couloir
+        - light.escalier_bas
+        - light.inter_bas_couloir_haut

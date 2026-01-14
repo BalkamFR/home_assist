@@ -1,0 +1,3017 @@
+- id: '1767307856456'
+  alias: nuance de bleu
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 2_single
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.meuble_pacome_2
+    data:
+      rgb_color:
+      - 0
+      - 7
+      - 199
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.bureau_pacome
+    data:
+      rgb_color:
+      - 0
+      - 255
+      - 213
+  mode: single
+- id: '1767308001078'
+  alias: nuance de bleu millieu
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 2_double
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.meuble_pacome_2
+    data:
+      rgb_color:
+      - 102
+      - 0
+      - 255
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.bureau_pacome
+    data:
+      rgb_color:
+      - 0
+      - 8
+      - 255
+  mode: single
+- id: '1767308116652'
+  alias: nuance de bleu bas
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 2_hold
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.meuble_pacome_2
+    data:
+      rgb_color:
+      - 0
+      - 7
+      - 199
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.bureau_pacome
+    data:
+      rgb_color:
+      - 0
+      - 7
+      - 199
+  mode: single
+- id: '1767308583878'
+  alias: luminosite chambre pacome max
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 4_single
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.meuble_pacome_2
+    data:
+      brightness_pct: 100
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.bureau_pacome
+    data:
+      brightness_pct: 100
+  mode: single
+- id: '1767308636042'
+  alias: luminosite chambre pacome millieu
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 4_double
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.meuble_pacome_2
+    data:
+      brightness_pct: 71
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.bureau_pacome
+    data:
+      brightness_pct: 73
+  mode: single
+- id: '1767308743720'
+  alias: luminosite chambre pacome min
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 4_hold
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.meuble_pacome_2
+    data:
+      brightness_pct: 25
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.bureau_pacome
+    data:
+      brightness_pct: 25
+  mode: single
+- id: '1767309130654'
+  alias: bleu rouge
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 3_single
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.meuble_pacome_2
+    data:
+      rgb_color:
+      - 0
+      - 8
+      - 245
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.bureau_pacome
+    data:
+      rgb_color:
+      - 255
+      - 0
+      - 0
+  mode: single
+- id: '1767309293927'
+  alias: rouge orange
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 3_double
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 109
+      - 31
+    target:
+      entity_id: light.meuble_pacome_2
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 0
+      - 0
+    target:
+      entity_id: light.bureau_pacome
+  mode: single
+- id: '1767309515430'
+  alias: rouge
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 3_hold
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 0
+      - 0
+    target:
+      entity_id: light.bureau_pacome
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 0
+      - 0
+    target:
+      entity_id: light.meuble_pacome_2
+  mode: single
+- id: '1767311763977'
+  alias: 'Stop lumière bureau meuble Pacôme '
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 1_double
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      brightness_pct: 0
+    target:
+      entity_id: light.meuble_pacome_2
+  - action: light.turn_on
+    metadata: {}
+    data:
+      brightness_pct: 0
+    target:
+      entity_id: light.bureau_pacome
+  - action: light.turn_off
+    metadata: {}
+    target:
+      entity_id: light.switch_pacome
+    data: {}
+  - type: turn_off
+    device_id: 9b7a7b6d3867832da7f4fe7bac953ac4
+    entity_id: 10e1dc96f879a6741942567d30df6f20
+    domain: light
+  mode: single
+- id: '1767397397860'
+  alias: allumer chambre pacome
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 1_single
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.meuble_pacome_2
+    data:
+      color_temp_kelvin: 5620
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.bureau_pacome
+    data:
+      color_temp_kelvin: 5522
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.switch_pacome
+    data: {}
+  - action: light.toggle
+    metadata: {}
+    target:
+      entity_id: light.couleur_chambre_pacome
+    data:
+      color_temp_kelvin: 5348
+      brightness_pct: 100
+  mode: single
+- id: '1767472212809'
+  alias: Volet On
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - cover.volet_all
+    attribute: assumed_state
+  conditions: []
+  actions:
+  - action: script.fermer_volet_salle_de_bain_pacome
+    data: {}
+  mode: single
+- id: '1767558117068'
+  alias: Kids Week
+  description: ''
+  triggers:
+  - trigger: calendar
+    entity_id: calendar.calendrier_pierre
+    event: start
+    offset: 0:0:0
+  conditions: []
+  actions:
+  - action: netatmo.set_schedule
+    metadata: {}
+    data:
+      schedule_name: Planning travail
+    target:
+      device_id: 4af61c28cb8747b1ad47d425ff3f90aa
+  mode: single
+- id: '1767558516969'
+  alias: Non kids week
+  description: ''
+  triggers:
+  - trigger: calendar
+    entity_id: calendar.calendrier_pierre
+    event: end
+    offset: 0:0:0
+  conditions: []
+  actions:
+  - action: netatmo.set_schedule
+    metadata: {}
+    data:
+      schedule_name: planning alone
+    target:
+      device_id: 4af61c28cb8747b1ad47d425ff3f90aa
+  mode: single
+- id: '1767644464006'
+  alias: Sacha Led
+  description: ''
+  triggers:
+  - type: changed_states
+    device_id: a459ed1fa1c41a188b3d070896e70064
+    entity_id: 06062f8b8cc78ba2eee29e588976084c
+    domain: light
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.toggle
+    metadata: {}
+    target:
+      entity_id: light.bande_sacha
+    data:
+      rgb_color:
+      - 66
+      - 78
+      - 245
+  mode: single
+- id: '1767735941690'
+  alias: led Hanaé light increase
+  description: ''
+  triggers:
+  - device_id: 0363c7dbd96a6133ec08caa3ab4f3329
+    domain: zha
+    type: remote_button_long_press
+    subtype: dim_up
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.bande_lumineuse_connectee
+    data:
+      brightness_step_pct: 20
+  mode: single
+- id: '1767739077733'
+  alias: Led Hanae Down
+  description: ''
+  triggers:
+  - device_id: 0363c7dbd96a6133ec08caa3ab4f3329
+    domain: zha
+    type: remote_button_long_press
+    subtype: dim_down
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.bande_lumineuse_connectee
+    data:
+      brightness_step_pct: -35
+  mode: single
+- id: '1767739167423'
+  alias: Led Hanaé off
+  description: ''
+  triggers:
+  - device_id: 0363c7dbd96a6133ec08caa3ab4f3329
+    domain: zha
+    type: remote_button_short_press
+    subtype: turn_off
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    target:
+      entity_id: light.bande_lumineuse_connectee
+    data: {}
+  mode: single
+- id: '1767740136114'
+  alias: remote ikea
+  description: ''
+  triggers:
+  - device_id: 7e2dc034e33156043f22915cd14a1219
+    domain: zha
+    type: remote_button_short_press
+    subtype: right
+    trigger: device
+  - domain: mqtt
+    device_id: 0eaea31a70070c2038b8938aae4c2ce7
+    type: action
+    subtype: arrow_right_click
+    trigger: device
+  conditions: []
+  actions:
+  - action: counter.increment
+    metadata: {}
+    data: {}
+    target:
+      entity_id: counter.counter_scene
+  mode: single
+- id: '1767777875003'
+  alias: Led Hanae Switch
+  description: ''
+  triggers:
+  - trigger: numeric_state
+    entity_id:
+    - counter.counter_scene
+    above: 0.5
+    below: 1.5
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      color_temp_kelvin: 2400
+    target:
+      area_id: chambre_chiara
+  mode: single
+- id: '1767779235742'
+  alias: Led Switch Red
+  description: ''
+  triggers:
+  - trigger: numeric_state
+    entity_id:
+    - counter.counter_scene
+    above: 1.5
+    below: 2.5
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      area_id: chambre_chiara
+    data:
+      rgb_color:
+      - 255
+      - 20
+      - 146
+  mode: single
+- id: '1767779270599'
+  alias: Led Switch Green
+  description: ''
+  triggers:
+  - trigger: numeric_state
+    entity_id:
+    - counter.counter_scene
+    above: 2.5
+    below: 3.5
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 59
+      - 241
+      - 9
+    target:
+      area_id: chambre_chiara
+  mode: single
+- id: '1767779325783'
+  alias: Led switch yello
+  description: ''
+  triggers:
+  - trigger: numeric_state
+    entity_id:
+    - counter.counter_scene
+    above: -0.5
+    below: 0.5
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      color_temp_kelvin: 6500
+    target:
+      area_id: chambre_chiara
+  mode: single
+- id: '1767779688055'
+  alias: Reset Led Counter
+  description: ''
+  triggers:
+  - trigger: numeric_state
+    entity_id:
+    - counter.counter_scene
+    above: 3.5
+  conditions: []
+  actions:
+  - action: counter.reset
+    metadata: {}
+    target:
+      entity_id: counter.counter_scene
+    data: {}
+  mode: single
+- id: '1767804008439'
+  alias: 'Switch Pierre''s Bed '
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: toggle
+    trigger: device
+    id: Toggle
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: arrow_right_click
+    trigger: device
+    id: Right
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: arrow_left_click
+    trigger: device
+    id: Left
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: brightness_down_click
+    trigger: device
+    id: Dim-Down
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: brightness_down_release
+    trigger: device
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: brightness_up_release
+    trigger: device
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: brightness_up_click
+    trigger: device
+    id: Dim-Up
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: brightness_up_hold
+    trigger: device
+    id: Dim-long-Up
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: brightness_down_hold
+    trigger: device
+    id: Dim-long-down
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: arrow_left_hold
+    trigger: device
+    id: Left-hold
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: arrow_left_release
+    trigger: device
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: arrow_right_hold
+    trigger: device
+    id: Right-hold
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: arrow_right_release
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - Toggle
+      sequence:
+      - type: toggle
+        device_id: 9322530a9b68dd4165d9ee966dafff49
+        entity_id: 7244643035d48ca552e5baf73cbba59d
+        domain: light
+      - action: light.toggle
+        metadata: {}
+        data: {}
+        target:
+          device_id: 6df6e1534321c6e1ead3689e7a36a7a3
+    - conditions:
+      - condition: trigger
+        id:
+        - Right
+      sequence:
+      - action: counter.increment
+        metadata: {}
+        target:
+          entity_id: counter.pierre_room_scene
+        data: {}
+      - action: input_boolean.turn_on
+        metadata: {}
+        target:
+          entity_id: input_boolean.pierre_bed_scene_counter_changed
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - Left
+      sequence:
+      - action: input_boolean.turn_on
+        metadata: {}
+        target:
+          entity_id: input_boolean.pierre_bed_scene_counter_changed
+        data: {}
+      - action: counter.decrement
+        metadata: {}
+        data: {}
+        target:
+          entity_id: counter.pierre_room_scene
+    - conditions:
+      - condition: trigger
+        id:
+        - Dim-Up
+      sequence:
+      - device_id: 6df6e1534321c6e1ead3689e7a36a7a3
+        domain: light
+        entity_id: 66614683d5ad1606feb877b0777943a4
+        type: brightness_increase
+    - conditions:
+      - condition: trigger
+        id:
+        - Dim-long-Up
+      sequence:
+      - repeat:
+          while:
+          - condition: trigger
+            id:
+            - Dim-long-Up
+          sequence:
+          - device_id: 6df6e1534321c6e1ead3689e7a36a7a3
+            domain: light
+            entity_id: 66614683d5ad1606feb877b0777943a4
+            type: brightness_increase
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 0
+              milliseconds: 400
+    - conditions:
+      - condition: trigger
+        id:
+        - Dim-long-down
+      sequence:
+      - repeat:
+          while:
+          - condition: trigger
+            id:
+            - Dim-long-down
+          sequence:
+          - device_id: 6df6e1534321c6e1ead3689e7a36a7a3
+            domain: light
+            entity_id: 66614683d5ad1606feb877b0777943a4
+            type: brightness_decrease
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 0
+              milliseconds: 400
+    - conditions:
+      - condition: trigger
+        id:
+        - Dim-Down
+      sequence:
+      - device_id: 6df6e1534321c6e1ead3689e7a36a7a3
+        domain: light
+        entity_id: 66614683d5ad1606feb877b0777943a4
+        type: brightness_decrease
+    - conditions:
+      - condition: trigger
+        id:
+        - Left-hold
+      sequence:
+      - action: light.toggle
+        metadata: {}
+        target:
+          device_id:
+          - 66f30e215d3d6e1399abffb7860889c8
+          - 8069a1e5e5074a69da2d124ca7df8ee6
+          - 59305f3ce0c89ba6923384d67331f7aa
+        data: {}
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: counter.pierre_room_scene
+        below: 0.5
+      sequence:
+      - action: counter.set_value
+        metadata: {}
+        target:
+          entity_id: counter.pierre_room_scene
+        data:
+          value: 5
+      - action: light.turn_on
+        metadata: {}
+        target:
+          device_id:
+          - 9322530a9b68dd4165d9ee966dafff49
+          - 6df6e1534321c6e1ead3689e7a36a7a3
+        data:
+          rgb_color:
+          - 249
+          - 6
+          - 216
+    - conditions:
+      - condition: numeric_state
+        entity_id: counter.pierre_room_scene
+        above: 0.5
+        below: 1
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        target:
+          device_id: 6df6e1534321c6e1ead3689e7a36a7a3
+        data:
+          color_temp_kelvin: 6489
+      - action: light.turn_off
+        metadata: {}
+        target:
+          entity_id: light.0xa46dd4fffe677161
+        data: {}
+    - conditions:
+      - condition: numeric_state
+        entity_id: counter.pierre_room_scene
+        above: 1.5
+        below: 2.5
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        target:
+          device_id: 6df6e1534321c6e1ead3689e7a36a7a3
+        data:
+          color_temp_kelvin: 3633
+      - action: light.turn_off
+        metadata: {}
+        target:
+          entity_id: light.0xa46dd4fffe677161
+        data: {}
+    - conditions:
+      - condition: numeric_state
+        entity_id: counter.pierre_room_scene
+        above: 2.5
+        below: 3.5
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        target:
+          device_id:
+          - 6df6e1534321c6e1ead3689e7a36a7a3
+          - 9322530a9b68dd4165d9ee966dafff49
+        data:
+          color_temp_kelvin: 2000
+    - conditions:
+      - condition: numeric_state
+        entity_id: counter.pierre_room_scene
+        above: 3.5
+        below: 4.5
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        target:
+          device_id:
+          - 9322530a9b68dd4165d9ee966dafff49
+        data:
+          rgb_color:
+          - 249
+          - 6
+          - 216
+      - action: light.turn_on
+        metadata: {}
+        target:
+          device_id:
+          - 6df6e1534321c6e1ead3689e7a36a7a3
+        data:
+          rgb_color:
+          - 6
+          - 67
+          - 249
+    - conditions:
+      - condition: numeric_state
+        entity_id: counter.pierre_room_scene
+        above: 4.5
+        below: 5.5
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        target:
+          device_id:
+          - 9322530a9b68dd4165d9ee966dafff49
+          - 6df6e1534321c6e1ead3689e7a36a7a3
+        data:
+          rgb_color:
+          - 249
+          - 6
+          - 216
+    default:
+    - action: light.turn_on
+      metadata: {}
+      target:
+        device_id: 6df6e1534321c6e1ead3689e7a36a7a3
+      data:
+        color_temp_kelvin: 6489
+    - action: light.turn_off
+      metadata: {}
+      target:
+        entity_id: light.0xa46dd4fffe677161
+      data: {}
+    - action: counter.set_value
+      metadata: {}
+      target:
+        entity_id: counter.pierre_room_scene
+      data:
+        value: 1
+  mode: restart
+- id: '1767806071551'
+  alias: Chambre Pierre Scene down
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: d3551ad873d1ef2d430eb552168450a7
+    type: action
+    subtype: arrow_left_click
+    trigger: device
+  conditions: []
+  actions:
+  - action: counter.decrement
+    metadata: {}
+    target:
+      entity_id: counter.pierre_room_scene
+    data: {}
+  mode: single
+- id: '1767808280073'
+  alias: Pierre'Room Light Off
+  description: ''
+  triggers:
+  - device_id: d3199a80022e3f773697d59325e37d1d
+    domain: zha
+    type: remote_button_long_release
+    subtype: dim_down
+    trigger: device
+  - device_id: b889eb6acf4ace25be31b60bb64a9c25
+    domain: zha
+    type: remote_button_long_release
+    subtype: button
+    trigger: device
+  - domain: mqtt
+    device_id: 61e30642de9ddd446e71300da691b710
+    type: action
+    subtype: 'off'
+    trigger: device
+  - domain: mqtt
+    device_id: 2d017d079280cf5dfd26c9aaef6b7daa
+    type: action
+    subtype: 'off'
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    target:
+      area_id: chambre_pierre
+    data: {}
+  - type: turn_off
+    device_id: fb04a69e2ab5ee33be4c477956479cb9
+    entity_id: c61388af38408420f9ea77992730c47d
+    domain: light
+  mode: single
+- id: '1767815218583'
+  alias: Chiara Light decrease
+  description: ''
+  triggers:
+  - device_id: 7e2dc034e33156043f22915cd14a1219
+    domain: zha
+    type: remote_button_short_press
+    subtype: turn_off
+    trigger: device
+  - domain: mqtt
+    device_id: 0eaea31a70070c2038b8938aae4c2ce7
+    type: action
+    subtype: 'off'
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    enabled: false
+  - device_id: 86befce2ccf4689a488fbdad7991ed6b
+    domain: light
+    entity_id: f71657b55af91e7853128f0d0df1acb9
+    type: brightness_decrease
+  - device_id: b99d18a5078c2038f91796dbdf7ca1d7
+    domain: light
+    entity_id: 27c0c5e13e3b7d8842162d1695c375fc
+    type: brightness_decrease
+  - device_id: 9b062f3094ed53cbfd211d0b8aab49fa
+    domain: light
+    entity_id: b9255340519d093ac5aa85d4bcd24e20
+    type: brightness_decrease
+  - device_id: 82ca67bc07a0e3bacc9a4d743a595d1b
+    domain: light
+    entity_id: e880d70070f3a72cab197ff0fa374d75
+    type: brightness_decrease
+  mode: single
+- id: '1767815243469'
+  alias: Chiara Light Increase
+  description: ''
+  triggers:
+  - device_id: 7e2dc034e33156043f22915cd14a1219
+    domain: zha
+    type: remote_button_short_press
+    subtype: turn_on
+    trigger: device
+  - domain: mqtt
+    device_id: 0eaea31a70070c2038b8938aae4c2ce7
+    type: action
+    subtype: 'on'
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    enabled: false
+  - device_id: 86befce2ccf4689a488fbdad7991ed6b
+    domain: light
+    entity_id: f71657b55af91e7853128f0d0df1acb9
+    type: brightness_increase
+  - device_id: b99d18a5078c2038f91796dbdf7ca1d7
+    domain: light
+    entity_id: 27c0c5e13e3b7d8842162d1695c375fc
+    type: brightness_increase
+  - device_id: 9b062f3094ed53cbfd211d0b8aab49fa
+    domain: light
+    entity_id: b9255340519d093ac5aa85d4bcd24e20
+    type: brightness_increase
+  - device_id: 82ca67bc07a0e3bacc9a4d743a595d1b
+    domain: light
+    entity_id: e880d70070f3a72cab197ff0fa374d75
+    type: brightness_increase
+  mode: single
+- id: '1767815546198'
+  alias: Switch off Chiara
+  description: ''
+  triggers:
+  - device_id: 7e2dc034e33156043f22915cd14a1219
+    domain: zha
+    type: remote_button_long_press
+    subtype: dim_down
+    trigger: device
+  - domain: mqtt
+    device_id: 0eaea31a70070c2038b8938aae4c2ce7
+    type: action
+    subtype: arrow_left_click
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.toggle
+    metadata: {}
+    target:
+      area_id: chambre_chiara
+    data: {}
+  mode: single
+- id: '1767886630163'
+  alias: Chambre Pierre Ambiant 3
+  description: ''
+  triggers:
+  - device_id: b889eb6acf4ace25be31b60bb64a9c25
+    domain: zha
+    type: remote_button_short_press
+    subtype: turn_on
+    trigger: device
+  - device_id: b889eb6acf4ace25be31b60bb64a9c25
+    domain: zha
+    type: remote_button_short_press
+    subtype: turn_off
+    trigger: device
+  - domain: mqtt
+    device_id: 61e30642de9ddd446e71300da691b710
+    type: action
+    subtype: ambiance_III
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.0x84b4dbfffec82c00
+    data:
+      rgb_color:
+      - 245
+      - 0
+      - 0
+      brightness_pct: 100
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.0xa46dd4fffe677161
+    data:
+      rgb_color:
+      - 255
+      - 0
+      - 234
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.0x403059fffef097e2
+    data:
+      brightness_pct: 100
+      rgb_color:
+      - 17
+      - 0
+      - 255
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.0x94deb8fffeb20706
+    data:
+      brightness_pct: 100
+      rgb_color:
+      - 0
+      - 76
+      - 255
+  mode: single
+- id: '1767895738425'
+  alias: Switch Lampe Sonos
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 0f59a6fd0f681276262d59c3efec17f1
+    type: action
+    subtype: 'on'
+    trigger: device
+    id: 'ON'
+  - domain: mqtt
+    device_id: 0f59a6fd0f681276262d59c3efec17f1
+    type: action
+    subtype: 'off'
+    trigger: device
+    id: 'OFF'
+  - domain: mqtt
+    device_id: 0f59a6fd0f681276262d59c3efec17f1
+    type: action
+    subtype: brightness_move_up
+    trigger: device
+    id: dim-up
+  - domain: mqtt
+    device_id: 0f59a6fd0f681276262d59c3efec17f1
+    type: action
+    subtype: brightness_move_down
+    trigger: device
+    id: dim-down
+  - domain: mqtt
+    device_id: 0f59a6fd0f681276262d59c3efec17f1
+    type: action
+    subtype: brightness_stop
+    trigger: device
+    id: release
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - 'ON'
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        target:
+          device_id: 9322530a9b68dd4165d9ee966dafff49
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - 'OFF'
+      sequence:
+      - action: light.turn_off
+        metadata: {}
+        target:
+          device_id: 9322530a9b68dd4165d9ee966dafff49
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - dim-up
+      sequence:
+      - repeat:
+          while:
+          - condition: trigger
+            id:
+            - dim-up
+          sequence:
+          - device_id: 9322530a9b68dd4165d9ee966dafff49
+            domain: light
+            entity_id: 7244643035d48ca552e5baf73cbba59d
+            type: brightness_increase
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 0
+              milliseconds: 500
+    - conditions:
+      - condition: trigger
+        id:
+        - dim-down
+      sequence:
+      - repeat:
+          while:
+          - condition: trigger
+            id:
+            - dim-down
+          sequence:
+          - device_id: 9322530a9b68dd4165d9ee966dafff49
+            domain: light
+            entity_id: 7244643035d48ca552e5baf73cbba59d
+            type: brightness_decrease
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 0
+              milliseconds: 500
+  mode: restart
+- id: '1768149715766'
+  alias: 'Switch Pierre'' Bed Room '
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 61e30642de9ddd446e71300da691b710
+    type: action
+    subtype: toggle
+    trigger: device
+    id: Toggle
+  - domain: mqtt
+    device_id: 61e30642de9ddd446e71300da691b710
+    type: action
+    subtype: 'off'
+    trigger: device
+    id: 'Off'
+  - domain: mqtt
+    device_id: 61e30642de9ddd446e71300da691b710
+    type: action
+    subtype: ambiance_I
+    trigger: device
+    id: Ambiant_1
+  - domain: mqtt
+    device_id: 61e30642de9ddd446e71300da691b710
+    type: action
+    subtype: ambiance_II
+    trigger: device
+    id: Ambiant_2
+  - domain: mqtt
+    device_id: 61e30642de9ddd446e71300da691b710
+    type: action
+    subtype: ambiance_III
+    trigger: device
+    id: Ambiant_3
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - Toggle
+      sequence:
+      - action: light.toggle
+        metadata: {}
+        target:
+          device_id:
+          - 59305f3ce0c89ba6923384d67331f7aa
+          - 66f30e215d3d6e1399abffb7860889c8
+        data: {}
+      - action: light.turn_on
+        metadata: {}
+        target:
+          device_id:
+          - 9322530a9b68dd4165d9ee966dafff49
+          - 6df6e1534321c6e1ead3689e7a36a7a3
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - 'Off'
+      sequence:
+      - action: light.turn_off
+        metadata: {}
+        target:
+          area_id: chambre_pierre
+        data: {}
+      - action: counter.reset
+        metadata: {}
+        target:
+          entity_id: counter.pierre_room_counter
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - Ambiant_1
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          color_temp_kelvin: 6500
+        target:
+          area_id: chambre_pierre
+      - action: counter.reset
+        metadata: {}
+        target:
+          entity_id: counter.pierre_room_counter
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - Ambiant_2
+      sequence:
+      - action: counter.reset
+        metadata: {}
+        target:
+          entity_id: counter.pierre_room_counter
+        data: {}
+      - action: light.turn_on
+        metadata: {}
+        data:
+          color_temp_kelvin: 2685
+        target:
+          area_id: chambre_pierre
+    - conditions:
+      - condition: trigger
+        id:
+        - Ambiant_3
+      sequence:
+      - action: counter.increment
+        metadata: {}
+        target:
+          entity_id: counter.pierre_room_counter
+        data: {}
+      - choose:
+        - conditions:
+          - condition: numeric_state
+            entity_id: counter.pierre_room_counter
+            below: 0.5
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              rgb_color:
+              - 255
+              - 0
+              - 200
+              brightness_pct: 100
+            target:
+              area_id: chambre_pierre
+          - action: counter.set_value
+            metadata: {}
+            target:
+              entity_id:
+              - counter.pierre_room_counter
+            data:
+              value: 5
+        - conditions:
+          - condition: numeric_state
+            entity_id: counter.pierre_room_counter
+            below: 2.5
+            above: 1.5
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            target:
+              entity_id: light.0x94deb8fffeb20706
+            data:
+              rgb_color:
+              - 0
+              - 113
+              - 235
+              brightness_pct: 100
+          - action: light.turn_on
+            metadata: {}
+            data:
+              rgb_color:
+              - 0
+              - 8
+              - 235
+              brightness_pct: 100
+            target:
+              device_id: 59305f3ce0c89ba6923384d67331f7aa
+          - action: light.turn_on
+            metadata: {}
+            data:
+              rgb_color:
+              - 255
+              - 0
+              - 0
+              brightness_pct: 100
+            target:
+              device_id: 66f30e215d3d6e1399abffb7860889c8
+          - action: light.turn_on
+            metadata: {}
+            data:
+              rgb_color:
+              - 200
+              - 0
+              - 255
+              brightness_pct: 100
+            target:
+              device_id: 9322530a9b68dd4165d9ee966dafff49
+        - conditions:
+          - condition: numeric_state
+            entity_id: counter.pierre_room_counter
+            below: 3.5
+            above: 2.5
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            target:
+              entity_id: light.0x94deb8fffeb20706
+            data:
+              rgb_color:
+              - 63
+              - 235
+              - 0
+              brightness_pct: 100
+          - action: light.turn_on
+            metadata: {}
+            data:
+              rgb_color:
+              - 0
+              - 8
+              - 235
+              brightness_pct: 100
+            target:
+              device_id: 59305f3ce0c89ba6923384d67331f7aa
+          - action: light.turn_on
+            metadata: {}
+            data:
+              rgb_color:
+              - 251
+              - 255
+              - 0
+              brightness_pct: 100
+            target:
+              device_id: 66f30e215d3d6e1399abffb7860889c8
+          - action: light.turn_on
+            metadata: {}
+            data:
+              rgb_color:
+              - 255
+              - 0
+              - 0
+              brightness_pct: 100
+            target:
+              device_id: 9322530a9b68dd4165d9ee966dafff49
+        - conditions:
+          - condition: numeric_state
+            entity_id: counter.pierre_room_counter
+            below: 4.5
+            above: 3.5
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            target:
+              entity_id: light.0x94deb8fffeb20706
+            data:
+              rgb_color:
+              - 219
+              - 0
+              - 235
+              brightness_pct: 100
+          - action: light.turn_on
+            metadata: {}
+            data:
+              rgb_color:
+              - 235
+              - 0
+              - 215
+              brightness_pct: 100
+            target:
+              device_id: 59305f3ce0c89ba6923384d67331f7aa
+          - action: light.turn_on
+            metadata: {}
+            data:
+              rgb_color:
+              - 0
+              - 171
+              - 245
+              brightness_pct: 100
+            target:
+              device_id: 66f30e215d3d6e1399abffb7860889c8
+          - action: light.turn_on
+            metadata: {}
+            data:
+              rgb_color:
+              - 0
+              - 64
+              - 255
+              brightness_pct: 100
+            target:
+              device_id: 9322530a9b68dd4165d9ee966dafff49
+        - conditions:
+          - condition: numeric_state
+            entity_id: counter.pierre_room_counter
+            below: 5.5
+            above: 4.5
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              rgb_color:
+              - 255
+              - 0
+              - 200
+              brightness_pct: 100
+            target:
+              area_id: chambre_pierre
+        default:
+        - action: light.turn_on
+          metadata: {}
+          data:
+            brightness_pct: 100
+            color_temp_kelvin: 2000
+          target:
+            area_id: chambre_pierre
+        - action: counter.set_value
+          metadata: {}
+          data:
+            value: 1
+          target:
+            entity_id: counter.pierre_room_counter
+  mode: restart
+- id: '1768161382010'
+  alias: Switch Double Cuisine
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 18512c7f7086634c6a94e43310a41ce2
+    type: action
+    subtype: toggle_right
+    trigger: device
+    id: Right
+  - domain: mqtt
+    device_id: 18512c7f7086634c6a94e43310a41ce2
+    type: action
+    subtype: toggle_left
+    trigger: device
+    id: Left
+  - domain: mqtt
+    device_id: 18512c7f7086634c6a94e43310a41ce2
+    type: action
+    subtype: off_right
+    trigger: device
+    id: off-Right
+  - domain: mqtt
+    device_id: 18512c7f7086634c6a94e43310a41ce2
+    type: action
+    subtype: off_left
+    trigger: device
+    id: off-Left
+  - domain: mqtt
+    device_id: 18512c7f7086634c6a94e43310a41ce2
+    type: action
+    subtype: brightness_move_up_right
+    trigger: device
+    id: Dim-long-Up-Right
+  - domain: mqtt
+    device_id: 18512c7f7086634c6a94e43310a41ce2
+    type: action
+    subtype: brightness_move_down_right
+    trigger: device
+    id: Dim-long-Down-Right
+  - domain: mqtt
+    device_id: 18512c7f7086634c6a94e43310a41ce2
+    type: action
+    subtype: brightness_move_up_left
+    trigger: device
+    id: Left-Up-Hold
+  - domain: mqtt
+    device_id: 18512c7f7086634c6a94e43310a41ce2
+    type: action
+    subtype: brightness_move_down_left
+    trigger: device
+    id: Left-Down-Hold
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - Right
+      sequence:
+      - action: light.toggle
+        metadata: {}
+        target:
+          device_id:
+          - 0e8d9bc2a3498e8f4d6595244151b16d
+          - 3aab4c7ce33774e51da24646e18321fa
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - off-Left
+      sequence:
+      - type: turn_off
+        device_id: 338d1c7249cd67550bf3ac288af788ca
+        entity_id: ba1d45a06e5ac64f7bd5f06f0f64dc3e
+        domain: switch
+    - conditions:
+      - condition: trigger
+        id:
+        - off-Right
+      sequence:
+      - action: light.turn_off
+        metadata: {}
+        target:
+          device_id:
+          - 0e8d9bc2a3498e8f4d6595244151b16d
+          - 3aab4c7ce33774e51da24646e18321fa
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - Left
+      sequence:
+      - type: toggle
+        device_id: 338d1c7249cd67550bf3ac288af788ca
+        entity_id: ba1d45a06e5ac64f7bd5f06f0f64dc3e
+        domain: switch
+    - conditions:
+      - condition: trigger
+        id:
+        - Dim-long-Up-Right
+      sequence:
+      - repeat:
+          while:
+          - condition: trigger
+            id:
+            - Dim-long-Up-Right
+          sequence:
+          - device_id: 3aab4c7ce33774e51da24646e18321fa
+            domain: light
+            entity_id: 04995c8d641193841224f61e9f426c33
+            type: brightness_increase
+          - device_id: 0e8d9bc2a3498e8f4d6595244151b16d
+            domain: light
+            entity_id: 2d5b57b093467061ccb46c8a954210ae
+            type: brightness_increase
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 0
+              milliseconds: 400
+    - conditions:
+      - condition: trigger
+        id:
+        - Dim-long-Down-Right
+      sequence:
+      - repeat:
+          while:
+          - condition: trigger
+            id:
+            - Dim-long-Down-Right
+          sequence:
+          - device_id: 6df6e1534321c6e1ead3689e7a36a7a3
+            domain: light
+            entity_id: 66614683d5ad1606feb877b0777943a4
+            type: brightness_decrease
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 0
+              milliseconds: 400
+    - conditions:
+      - condition: trigger
+        id:
+        - Left-Up-Hold
+      sequence:
+      - repeat:
+          while:
+          - condition: trigger
+            id:
+            - Left-Up-Hold
+          sequence:
+          - action: counter.increment
+            metadata: {}
+            target:
+              entity_id: counter.cuisine_scene_compteur
+            data: {}
+          - choose:
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.cuisine_scene_compteur
+                below: 0.5
+              sequence:
+              - action: counter.set_value
+                metadata: {}
+                data:
+                  value: 5
+                target:
+                  entity_id: counter.cuisine_scene_compteur
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.cuisine_scene_compteur
+                above: 0.5
+                below: 1
+              sequence:
+              - action: light.turn_on
+                metadata: {}
+                data:
+                  color_temp_kelvin: 6489
+                target:
+                  device_id:
+                  - 0e8d9bc2a3498e8f4d6595244151b16d
+                  - 3aab4c7ce33774e51da24646e18321fa
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.cuisine_scene_compteur
+                above: 1.5
+                below: 2.5
+              sequence:
+              - action: light.turn_on
+                metadata: {}
+                data:
+                  color_temp_kelvin: 3232
+                target:
+                  device_id:
+                  - 0e8d9bc2a3498e8f4d6595244151b16d
+                  - 3aab4c7ce33774e51da24646e18321fa
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.cuisine_scene_compteur
+                above: 2.5
+                below: 3.5
+              sequence:
+              - action: light.turn_on
+                metadata: {}
+                data:
+                  color_temp_kelvin: 2000
+                target:
+                  device_id:
+                  - 0e8d9bc2a3498e8f4d6595244151b16d
+                  - 3aab4c7ce33774e51da24646e18321fa
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.cuisine_scene_compteur
+                above: 3.5
+                below: 4.5
+              sequence:
+              - action: light.turn_on
+                metadata: {}
+                data:
+                  rgb_color:
+                  - 192
+                  - 0
+                  - 245
+                target:
+                  device_id:
+                  - 0e8d9bc2a3498e8f4d6595244151b16d
+                  - 3aab4c7ce33774e51da24646e18321fa
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.cuisine_scene_compteur
+                above: 4.5
+                below: 5.5
+              sequence:
+              - action: light.turn_on
+                metadata: {}
+                data:
+                  rgb_color:
+                  - 192
+                  - 0
+                  - 245
+                target:
+                  device_id:
+                  - 0e8d9bc2a3498e8f4d6595244151b16d
+                  - 3aab4c7ce33774e51da24646e18321fa
+            default:
+            - action: light.turn_on
+              metadata: {}
+              data:
+                rgb_color:
+                - 245
+                - 16
+                - 0
+              target:
+                device_id:
+                - 0e8d9bc2a3498e8f4d6595244151b16d
+                - 3aab4c7ce33774e51da24646e18321fa
+            - action: counter.set_value
+              metadata: {}
+              data:
+                value: 1
+              target:
+                entity_id: counter.cuisine_scene_compteur
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 2
+              milliseconds: 0
+  mode: restart
+- id: '1768257982700'
+  alias: all pacome
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 1_single
+    trigger: device
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 1_hold
+    trigger: device
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 1_double
+    trigger: device
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 1_single
+    trigger: device
+  conditions: []
+  actions: []
+  mode: single
+- id: '1768259401465'
+  alias: stop principal pacome
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 1_hold
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    target:
+      entity_id: light.switch_pacome
+    data: {}
+  mode: single
+- id: '1768262649453'
+  alias: Switch rotative
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: cebb65dd0fd66dac6054415a21f87e1d
+    type: action
+    subtype: toggle
+    trigger: device
+    id: Right
+  - domain: mqtt
+    device_id: 18512c7f7086634c6a94e43310a41ce2
+    type: action
+    subtype: toggle_left
+    trigger: device
+    id: Left
+  - domain: mqtt
+    device_id: 18512c7f7086634c6a94e43310a41ce2
+    type: action
+    subtype: off_right
+    trigger: device
+    id: off-Right
+  - domain: mqtt
+    device_id: 18512c7f7086634c6a94e43310a41ce2
+    type: action
+    subtype: off_left
+    trigger: device
+    id: off-Left
+  - domain: mqtt
+    device_id: cebb65dd0fd66dac6054415a21f87e1d
+    type: action
+    subtype: rotate_left
+    trigger: device
+    id: Rotate_Left
+  - domain: mqtt
+    device_id: cebb65dd0fd66dac6054415a21f87e1d
+    type: action
+    subtype: rotate_right
+    trigger: device
+    id: Rotate_Right
+  - domain: mqtt
+    device_id: cebb65dd0fd66dac6054415a21f87e1d
+    type: action
+    subtype: single
+    trigger: device
+    id: Dim-long-Down-Right
+  - domain: mqtt
+    device_id: cebb65dd0fd66dac6054415a21f87e1d
+    type: action
+    subtype: color_temperature_step_up
+    trigger: device
+    id: Left-Up-Hold
+  - domain: mqtt
+    device_id: cebb65dd0fd66dac6054415a21f87e1d
+    type: action
+    subtype: color_temperature_step_down
+    trigger: device
+    id: Left-Down-Hold
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 4_single
+    trigger: device
+  - domain: mqtt
+    device_id: cebb65dd0fd66dac6054415a21f87e1d
+    type: action
+    subtype: hold
+    trigger: device
+  - domain: mqtt
+    device_id: 49248283f4b68d214d6045b419cbefa4
+    type: action
+    subtype: 4_single
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - Right
+      sequence:
+      - action: light.toggle
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.lampe_yaya_de_pacome
+    - conditions:
+      - condition: trigger
+        id:
+        - off-Left
+      sequence:
+      - type: turn_off
+        device_id: 338d1c7249cd67550bf3ac288af788ca
+        entity_id: ba1d45a06e5ac64f7bd5f06f0f64dc3e
+        domain: switch
+    - conditions:
+      - condition: trigger
+        id:
+        - off-Right
+      sequence:
+      - action: light.turn_off
+        metadata: {}
+        target:
+          device_id:
+          - 0e8d9bc2a3498e8f4d6595244151b16d
+          - 3aab4c7ce33774e51da24646e18321fa
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - Left
+      sequence:
+      - type: toggle
+        device_id: 338d1c7249cd67550bf3ac288af788ca
+        entity_id: ba1d45a06e5ac64f7bd5f06f0f64dc3e
+        domain: switch
+    - conditions:
+      - condition: trigger
+        id:
+        - Rotate_Right
+      sequence:
+      - repeat:
+          while:
+          - condition: trigger
+            id:
+            - Rotate_Right
+          sequence:
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 0
+              milliseconds: 400
+        enabled: false
+      - device_id: 9b7a7b6d3867832da7f4fe7bac953ac4
+        domain: light
+        entity_id: 10e1dc96f879a6741942567d30df6f20
+        type: brightness_increase
+    - conditions:
+      - condition: trigger
+        id:
+        - Rotate_Left
+      sequence:
+      - repeat:
+          while:
+          - condition: trigger
+            id:
+            - Dim-long-Down-Right
+          sequence:
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 0
+              milliseconds: 400
+        enabled: false
+      - device_id: 0e8d9bc2a3498e8f4d6595244151b16d
+        domain: light
+        entity_id: 2d5b57b093467061ccb46c8a954210ae
+        type: brightness_decrease
+      - device_id: 3aab4c7ce33774e51da24646e18321fa
+        domain: light
+        entity_id: 04995c8d641193841224f61e9f426c33
+        type: brightness_decrease
+    - conditions:
+      - condition: trigger
+        id:
+        - Left-Up-Hold
+      sequence:
+      - repeat:
+          while:
+          - condition: trigger
+            id:
+            - Left-Up-Hold
+          sequence:
+          - action: counter.increment
+            metadata: {}
+            target:
+              entity_id: counter.cuisine_scene_compteur
+            data: {}
+          - choose:
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.cuisine_scene_compteur
+                below: 0.5
+              sequence:
+              - action: counter.set_value
+                metadata: {}
+                data:
+                  value: 5
+                target:
+                  entity_id: counter.cuisine_scene_compteur
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.cuisine_scene_compteur
+                above: 0.5
+                below: 1
+              sequence:
+              - action: light.turn_on
+                metadata: {}
+                data:
+                  color_temp_kelvin: 6489
+                target:
+                  device_id:
+                  - 0e8d9bc2a3498e8f4d6595244151b16d
+                  - 3aab4c7ce33774e51da24646e18321fa
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.cuisine_scene_compteur
+                above: 1.5
+                below: 2.5
+              sequence:
+              - action: light.turn_on
+                metadata: {}
+                data:
+                  color_temp_kelvin: 3232
+                target:
+                  device_id:
+                  - 0e8d9bc2a3498e8f4d6595244151b16d
+                  - 3aab4c7ce33774e51da24646e18321fa
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.cuisine_scene_compteur
+                above: 2.5
+                below: 3.5
+              sequence:
+              - action: light.turn_on
+                metadata: {}
+                data:
+                  color_temp_kelvin: 2000
+                target:
+                  device_id:
+                  - 0e8d9bc2a3498e8f4d6595244151b16d
+                  - 3aab4c7ce33774e51da24646e18321fa
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.cuisine_scene_compteur
+                above: 3.5
+                below: 4.5
+              sequence:
+              - action: light.turn_on
+                metadata: {}
+                data:
+                  rgb_color:
+                  - 192
+                  - 0
+                  - 245
+                target:
+                  device_id:
+                  - 0e8d9bc2a3498e8f4d6595244151b16d
+                  - 3aab4c7ce33774e51da24646e18321fa
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.cuisine_scene_compteur
+                above: 4.5
+                below: 5.5
+              sequence:
+              - action: light.turn_on
+                metadata: {}
+                data:
+                  rgb_color:
+                  - 192
+                  - 0
+                  - 245
+                target:
+                  device_id:
+                  - 0e8d9bc2a3498e8f4d6595244151b16d
+                  - 3aab4c7ce33774e51da24646e18321fa
+            default:
+            - action: light.turn_on
+              metadata: {}
+              data:
+                rgb_color:
+                - 245
+                - 16
+                - 0
+              target:
+                device_id:
+                - 0e8d9bc2a3498e8f4d6595244151b16d
+                - 3aab4c7ce33774e51da24646e18321fa
+            - action: counter.set_value
+              metadata: {}
+              data:
+                value: 1
+              target:
+                entity_id: counter.cuisine_scene_compteur
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 2
+              milliseconds: 0
+    enabled: false
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - Rotate_Right
+      sequence:
+      - device_id: 9b7a7b6d3867832da7f4fe7bac953ac4
+        domain: light
+        entity_id: 10e1dc96f879a6741942567d30df6f20
+        type: brightness_increase
+    - conditions:
+      - condition: trigger
+        id:
+        - Rotate_Left
+      sequence:
+      - device_id: 9b7a7b6d3867832da7f4fe7bac953ac4
+        domain: light
+        entity_id: 10e1dc96f879a6741942567d30df6f20
+        type: brightness_decrease
+    - conditions:
+      - condition: trigger
+        id:
+        - Dim-long-Down-Right
+      sequence:
+      - type: toggle
+        device_id: 9b7a7b6d3867832da7f4fe7bac953ac4
+        entity_id: 10e1dc96f879a6741942567d30df6f20
+        domain: light
+    - conditions: []
+      sequence: []
+  mode: restart
+- id: '1768312780662'
+  alias: Remote Master v7 - Swap 2 & 3
+  description: Btn 2 = Ambiances (Focus/Cozy/Ambre). Btn 3 = Couleurs RGB.
+  triggers:
+  - domain: mqtt
+    device_id: 3bbf1235e1b9e4d1f9893f50888c432b
+    type: action
+    subtype: 1_single
+    id: btn1_single
+    trigger: device
+  - domain: mqtt
+    device_id: 3bbf1235e1b9e4d1f9893f50888c432b
+    type: action
+    subtype: 1_double
+    id: btn1_double
+    trigger: device
+  - domain: mqtt
+    device_id: 3bbf1235e1b9e4d1f9893f50888c432b
+    type: action
+    subtype: 1_hold
+    id: btn1_hold
+    trigger: device
+  - domain: mqtt
+    device_id: 3bbf1235e1b9e4d1f9893f50888c432b
+    type: action
+    subtype: 2_single
+    id: btn2_single
+    trigger: device
+  - domain: mqtt
+    device_id: 3bbf1235e1b9e4d1f9893f50888c432b
+    type: action
+    subtype: 2_double
+    id: btn2_double
+    trigger: device
+  - domain: mqtt
+    device_id: 3bbf1235e1b9e4d1f9893f50888c432b
+    type: action
+    subtype: 2_hold
+    id: btn2_hold
+    trigger: device
+  - domain: mqtt
+    device_id: 3bbf1235e1b9e4d1f9893f50888c432b
+    type: action
+    subtype: 3_single
+    id: btn3_single
+    trigger: device
+  - domain: mqtt
+    device_id: 3bbf1235e1b9e4d1f9893f50888c432b
+    type: action
+    subtype: 3_double
+    id: btn3_double
+    trigger: device
+  - domain: mqtt
+    device_id: 3bbf1235e1b9e4d1f9893f50888c432b
+    type: action
+    subtype: 3_hold
+    id: btn3_hold
+    trigger: device
+  - domain: mqtt
+    device_id: 3bbf1235e1b9e4d1f9893f50888c432b
+    type: action
+    subtype: 4_single
+    id: btn4_single
+    trigger: device
+  - domain: mqtt
+    device_id: 3bbf1235e1b9e4d1f9893f50888c432b
+    type: action
+    subtype: 4_double
+    id: btn4_double
+    trigger: device
+  - domain: mqtt
+    device_id: 3bbf1235e1b9e4d1f9893f50888c432b
+    type: action
+    subtype: 4_hold
+    id: btn4_hold
+    trigger: device
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: btn1_single
+      sequence:
+      - parallel:
+        - target:
+            entity_id: '{{ le_volet }}'
+          action: cover.open_cover
+        - target:
+            entity_id: '{{ lumieres_rgb }}'
+          data:
+            brightness_pct: 100
+            kelvin: 3000
+          action: light.turn_on
+        - target:
+            entity_id:
+            - '{{ switch_evier }}'
+            - '{{ switch_sam }}'
+          action: switch.turn_on
+    - conditions:
+      - condition: trigger
+        id: btn1_double
+      sequence:
+      - parallel:
+        - target:
+            entity_id: '{{ le_volet }}'
+          action: cover.close_cover
+        - target:
+            entity_id:
+            - '{{ lumieres_rgb }}'
+            - '{{ switch_evier }}'
+            - '{{ switch_sam }}'
+          action: homeassistant.turn_off
+    - conditions:
+      - condition: trigger
+        id: btn1_hold
+      sequence:
+      - target:
+          entity_id:
+          - '{{ switch_evier }}'
+          - '{{ switch_sam }}'
+        action: switch.turn_off
+    - conditions:
+      - condition: trigger
+        id: btn2_single
+      sequence:
+      - parallel:
+        - target:
+            entity_id: '{{ switch_evier }}'
+          action: switch.turn_off
+        - target:
+            entity_id: '{{ switch_sam }}'
+          action: switch.turn_on
+        - target:
+            entity_id: '{{ lumieres_rgb }}'
+          data:
+            kelvin: 4000
+            brightness_pct: 80
+            transition: 1
+          action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: btn2_double
+      sequence:
+      - parallel:
+        - target:
+            entity_id: '{{ switch_evier }}'
+          action: switch.turn_off
+        - target:
+            entity_id: '{{ switch_sam }}'
+          action: switch.turn_on
+        - target:
+            entity_id: '{{ lumieres_rgb }}'
+          data:
+            kelvin: 2200
+            brightness_pct: 30
+            transition: 1
+          action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: btn2_hold
+      sequence:
+      - parallel:
+        - target:
+            entity_id:
+            - '{{ switch_evier }}'
+            - '{{ switch_sam }}'
+          action: switch.turn_off
+        - target:
+            entity_id: '{{ lumieres_rgb }}'
+          data:
+            rgb_color:
+            - 255
+            - 160
+            - 0
+            brightness_pct: 40
+            transition: 2
+          action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: btn3_single
+      sequence:
+      - target:
+          entity_id: '{{ lumieres_rgb }}'
+        data:
+          rgb_color:
+          - 0
+          - 0
+          - 255
+          brightness_pct: 100
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: btn3_double
+      sequence:
+      - target:
+          entity_id: '{{ lumieres_rgb }}'
+        data:
+          rgb_color:
+          - 255
+          - 0
+          - 0
+          brightness_pct: 100
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: btn3_hold
+      sequence:
+      - target:
+          entity_id: '{{ lumieres_rgb }}'
+        data:
+          rgb_color:
+          - 0
+          - 255
+          - 0
+          brightness_pct: 100
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: btn4_single
+      sequence:
+      - target:
+          entity_id:
+          - '{{ switch_evier }}'
+          - '{{ switch_sam }}'
+        action: switch.turn_off
+      - parallel:
+        - target:
+            entity_id: '{{ groupe_red_zone }}'
+          data:
+            rgb_color:
+            - 255
+            - 0
+            - 0
+            brightness_pct: 80
+            transition: 1
+          action: light.turn_on
+        - target:
+            entity_id: '{{ groupe_blue_zone }}'
+          data:
+            rgb_color:
+            - 0
+            - 0
+            - 255
+            brightness_pct: 80
+            transition: 1
+          action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: btn4_double
+      sequence:
+      - target:
+          entity_id:
+          - '{{ switch_evier }}'
+          - '{{ switch_sam }}'
+        action: switch.turn_off
+      - target:
+          entity_id: '{{ lumieres_rgb }}'
+        action: light.turn_off
+      - repeat:
+          count: 30
+          sequence:
+          - repeat:
+              for_each: '{{ ordre_physique }}'
+              sequence:
+              - target:
+                  entity_id: '{{ repeat.item }}'
+                data:
+                  rgb_color:
+                  - '{{ range(0,255)|random }}'
+                  - '{{ range(0,255)|random }}'
+                  - '{{ range(0,255)|random }}'
+                  brightness_pct: 100
+                  transition: 0.1
+                action: light.turn_on
+              - delay: 0.2
+              - target:
+                  entity_id: '{{ repeat.item }}'
+                data:
+                  transition: 0.3
+                action: light.turn_off
+    - conditions:
+      - condition: trigger
+        id: btn4_hold
+      sequence:
+      - target:
+          entity_id: '{{ le_son }}'
+        action: media_player.media_play_pause
+      - target:
+          entity_id: light.lampe_bar_1
+        data:
+          flash: short
+        action: light.turn_on
+  mode: restart
+  max_exceeded: silent
+  variables:
+    le_volet: cover.volet_cuisine_force
+    le_son: media_player.piece_a_vivre
+    switch_evier: switch.lampe_evier
+    switch_sam: switch.salle_a_manger
+    lumieres_rgb:
+    - light.lampe_bar_1
+    - light.lampe_bar_3
+    - light.0xf0d1b8be240928d1
+    - light.0xf0d1b8be240928ba
+    - light.0xf0d1b8be240935e7
+    - light.lampe_cuisine_3
+    - light.lampe_cuisine_4
+    groupe_red_zone:
+    - light.lampe_bar_1
+    - light.lampe_bar_3
+    - light.lampe_cuisine_3
+    - light.lampe_cuisine_4
+    groupe_blue_zone:
+    - light.0xf0d1b8be240928d1
+    - light.0xf0d1b8be240928ba
+    - light.0xf0d1b8be240935e7
+    ordre_physique:
+    - light.lampe_bar_1
+    - light.lampe_bar_3
+    - light.0xf0d1b8be240928d1
+    - light.0xf0d1b8be240928ba
+    - light.0xf0d1b8be240935e7
+    - light.lampe_cuisine_3
+    - light.lampe_cuisine_4
+- id: '1768329799179'
+  alias: "\U0001F3AE Salon - Mode Compteur (Style Pierre)"
+  description: Gestion des scènes du salon avec compteur rotatif et variation
+  triggers:
+  - domain: mqtt
+    device_id: 0e8f0c9302877dd1905e1c47c1b0e773
+    type: action
+    subtype: toggle
+    trigger: device
+    id: Toggle
+  - domain: mqtt
+    device_id: 0e8f0c9302877dd1905e1c47c1b0e773
+    type: action
+    subtype: 'off'
+    trigger: device
+    id: 'Off'
+  - domain: mqtt
+    device_id: 0e8f0c9302877dd1905e1c47c1b0e773
+    type: action
+    subtype: ambiance_I
+    trigger: device
+    id: ambiance 1
+  - domain: mqtt
+    device_id: 0e8f0c9302877dd1905e1c47c1b0e773
+    type: action
+    subtype: ambiance_II
+    trigger: device
+    id: ambiance 2
+  - domain: mqtt
+    device_id: 0e8f0c9302877dd1905e1c47c1b0e773
+    type: action
+    subtype: ambiance_III
+    trigger: device
+    id: Scene_Next
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: Toggle
+      sequence:
+      - target:
+          entity_id:
+          - light.lumiere_salon_tv_2
+          - light.lumiere_canape_2
+          - light.light_yaya_salon_2
+          - light.lumiere_salon_entree
+        action: light.toggle
+    - conditions:
+      - condition: trigger
+        id: 'Off'
+      sequence:
+      - target:
+          entity_id:
+          - light.lumiere_salon_tv_2
+          - light.lumiere_canape_2
+          - light.light_yaya_salon_2
+          - light.lumiere_salon_entree
+        action: light.turn_off
+      - target:
+          entity_id: counter.compteur_scene_salon
+        action: counter.reset
+    - conditions:
+      - condition: trigger
+        id: Scene_Next
+      sequence:
+      - choose:
+        - conditions:
+          - condition: numeric_state
+            entity_id: counter.compteur_scene_salon
+            below: 0.5
+          sequence:
+          - target:
+              entity_id: counter.compteur_scene_salon
+            data:
+              value: 5
+            action: counter.set_value
+          - target:
+              entity_id: light.light_yaya_salon_2
+            data:
+              rgb_color:
+              - 255
+              - 0
+              - 0
+              brightness_pct: 100
+            action: light.turn_on
+          - target:
+              entity_id: light.lumiere_salon_tv_2
+            data:
+              rgb_color:
+              - 0
+              - 0
+              - 255
+              brightness_pct: 100
+            action: light.turn_on
+        - conditions:
+          - condition: numeric_state
+            entity_id: counter.compteur_scene_salon
+            above: 0.5
+            below: 1.5
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            target:
+              device_id:
+              - a14bf43e84921fd02058c45603421f54
+              - ca54342067775a7423f848dda8f4d34b
+              - 5f309e017977a5f7d47154548f543175
+            data:
+              color_temp_kelvin: 2000
+        - conditions:
+          - condition: numeric_state
+            entity_id: counter.compteur_scene_salon
+            above: 1.5
+            below: 2.5
+          sequence:
+          - action: light.turn_on
+            metadata: {}
+            target:
+              device_id: a14bf43e84921fd02058c45603421f54
+            data:
+              rgb_color:
+              - 255
+              - 0
+              - 247
+          - action: light.turn_on
+            metadata: {}
+            target:
+              device_id: ca54342067775a7423f848dda8f4d34b
+            data:
+              rgb_color:
+              - 0
+              - 145
+              - 255
+          - action: light.turn_off
+            metadata: {}
+            target:
+              device_id:
+              - c25e3882b4ed992c33c220434e1cefcb
+              - 5f309e017977a5f7d47154548f543175
+            data: {}
+        - conditions:
+          - condition: numeric_state
+            entity_id: counter.compteur_scene_salon
+            above: 2.5
+            below: 3.5
+          sequence:
+          - target:
+              entity_id:
+              - light.lumiere_salon_tv_2
+              - light.lumiere_canape_2
+              - light.lumiere_salon_entree
+            data:
+              kelvin: 2700
+              brightness_pct: 20
+            action: light.turn_on
+          - target:
+              entity_id: light.light_yaya_salon_2
+            data:
+              rgb_color:
+              - 138
+              - 43
+              - 226
+              brightness_pct: 100
+            action: light.turn_on
+        - conditions:
+          - condition: numeric_state
+            entity_id: counter.compteur_scene_salon
+            above: 3.5
+            below: 4.5
+          sequence:
+          - target:
+              entity_id:
+              - light.lumiere_salon_entree
+              - light.light_yaya_salon_2
+            action: light.turn_off
+          - target:
+              entity_id:
+              - light.lumiere_salon_tv_2
+              - light.lumiere_canape_2
+            data:
+              brightness_pct: 10
+              kelvin: 2700
+            action: light.turn_on
+        - conditions:
+          - condition: numeric_state
+            entity_id: counter.compteur_scene_salon
+            above: 4.5
+            below: 5.5
+          sequence:
+          - target:
+              entity_id: light.lumiere_salon_tv_2
+            data:
+              rgb_color:
+              - 0
+              - 255
+              - 0
+            action: light.turn_on
+          - target:
+              entity_id: light.lumiere_canape_2
+            data:
+              rgb_color:
+              - 0
+              - 0
+              - 255
+            action: light.turn_on
+          - target:
+              entity_id: light.light_yaya_salon_2
+            data:
+              rgb_color:
+              - 255
+              - 0
+              - 0
+            action: light.turn_on
+        - conditions:
+          - condition: numeric_state
+            entity_id: counter.compteur_scene_salon
+            above: 5.5
+          sequence:
+          - target:
+              entity_id: counter.compteur_scene_salon
+            data:
+              value: 1
+            action: counter.set_value
+          - target:
+              entity_id:
+              - light.lumiere_salon_tv_2
+              - light.lumiere_canape_2
+              - light.lumiere_salon_entree
+              - light.light_yaya_salon_2
+            data:
+              kelvin: 2200
+              brightness_pct: 30
+            action: light.turn_on
+      - target:
+          entity_id: counter.compteur_scene_salon
+        action: counter.increment
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - ambiance 1
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        target:
+          device_id:
+          - a14bf43e84921fd02058c45603421f54
+          - ca54342067775a7423f848dda8f4d34b
+          - 5f309e017977a5f7d47154548f543175
+        data:
+          color_temp_kelvin: 6500
+          brightness_pct: 100
+      - target:
+          entity_id: counter.compteur_scene_salon
+        action: counter.reset
+    - conditions:
+      - condition: trigger
+        id:
+        - ambiance 2
+      sequence:
+      - target:
+          entity_id: counter.compteur_scene_salon
+        action: counter.reset
+      - action: light.turn_on
+        metadata: {}
+        target:
+          device_id:
+          - a14bf43e84921fd02058c45603421f54
+          - ca54342067775a7423f848dda8f4d34b
+          - 5f309e017977a5f7d47154548f543175
+        data:
+          color_temp_kelvin: 3050
+          brightness_pct: 100
+  mode: restart
+- id: '1768331510831'
+  alias: "\U0001F3AE Master Remote (Salon Full & Cyber Mix)"
+  description: Btn1=Salon 100%, Btn2=Cuisine, Btn3=Cyber Mix, Btn4=Master
+  triggers:
+  - domain: mqtt
+    device_id: 721fdd7539e156d69e71b2062fce6d7f
+    type: action
+    subtype: 1_single
+    trigger: device
+    id: B1_Simple
+  - domain: mqtt
+    device_id: 721fdd7539e156d69e71b2062fce6d7f
+    type: action
+    subtype: 1_double
+    trigger: device
+    id: B1_Double
+  - domain: mqtt
+    device_id: 721fdd7539e156d69e71b2062fce6d7f
+    type: action
+    subtype: 1_hold
+    trigger: device
+    id: B1_Long
+  - domain: mqtt
+    device_id: 721fdd7539e156d69e71b2062fce6d7f
+    type: action
+    subtype: 2_single
+    trigger: device
+    id: B2_Simple
+  - domain: mqtt
+    device_id: 721fdd7539e156d69e71b2062fce6d7f
+    type: action
+    subtype: 2_double
+    trigger: device
+    id: B2_Double
+  - domain: mqtt
+    device_id: 721fdd7539e156d69e71b2062fce6d7f
+    type: action
+    subtype: 2_hold
+    trigger: device
+    id: B2_Long
+  - domain: mqtt
+    device_id: 721fdd7539e156d69e71b2062fce6d7f
+    type: action
+    subtype: 3_single
+    trigger: device
+    id: Scene_BlueRed
+  - domain: mqtt
+    device_id: 721fdd7539e156d69e71b2062fce6d7f
+    type: action
+    subtype: 3_double
+    trigger: device
+    id: Scene_FullWhite
+  - domain: mqtt
+    device_id: 721fdd7539e156d69e71b2062fce6d7f
+    type: action
+    subtype: 3_hold
+    trigger: device
+    id: Scene_Cozy
+  - domain: mqtt
+    device_id: 721fdd7539e156d69e71b2062fce6d7f
+    type: action
+    subtype: 4_single
+    trigger: device
+    id: Mode_Cinema
+  - domain: mqtt
+    device_id: 721fdd7539e156d69e71b2062fce6d7f
+    type: action
+    subtype: 4_double
+    trigger: device
+    id: Mode_Nuit
+  - domain: mqtt
+    device_id: 721fdd7539e156d69e71b2062fce6d7f
+    type: action
+    subtype: 4_hold
+    trigger: device
+    id: All_Off
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: B1_Simple
+      sequence:
+      - target:
+          entity_id:
+          - light.lumiere_salon_tv_2
+          - light.lumiere_canape_2
+          - light.lumiere_salon_entree
+        data:
+          brightness_pct: 100
+          kelvin: 4000
+        action: light.toggle
+    - conditions:
+      - condition: trigger
+        id: B1_Double
+      sequence:
+      - target:
+          entity_id: light.light_yaya_salon_2
+        data:
+          brightness_pct: 100
+        action: light.toggle
+    - conditions:
+      - condition: trigger
+        id: B1_Long
+      sequence:
+      - target:
+          entity_id:
+          - light.lumiere_salon_tv_2
+          - light.lumiere_canape_2
+          - light.lumiere_salon_entree
+          - light.light_yaya_salon_2
+        action: light.turn_off
+    - conditions:
+      - condition: trigger
+        id: B2_Simple
+      sequence:
+      - target:
+          entity_id:
+          - light.lumieres_cuisine
+          - light.lumieres_bar
+        action: light.toggle
+    - conditions:
+      - condition: trigger
+        id: B2_Double
+      sequence:
+      - target:
+          entity_id:
+          - switch.salle_a_manger
+          - switch.lampe_evier
+        action: switch.toggle
+    - conditions:
+      - condition: trigger
+        id: B2_Long
+      sequence:
+      - target:
+          entity_id:
+          - light.lumieres_cuisine
+          - light.lumieres_bar
+          - switch.salle_a_manger
+          - switch.lampe_evier
+        action: homeassistant.turn_off
+    - conditions:
+      - condition: trigger
+        id: Scene_BlueRed
+      sequence:
+      - target:
+          entity_id:
+          - light.lumieres_cuisine
+          - switch.salle_a_manger
+          - switch.lampe_evier
+        action: homeassistant.turn_off
+      - target:
+          entity_id: light.lumiere_salon_tv_2
+        data:
+          rgb_color:
+          - 0
+          - 0
+          - 255
+          brightness_pct: 100
+        action: light.turn_on
+      - target:
+          entity_id: light.light_yaya_salon_2
+        data:
+          rgb_color:
+          - 255
+          - 0
+          - 0
+          brightness_pct: 100
+        action: light.turn_on
+      - target:
+          entity_id: light.lumieres_bar
+        data:
+          rgb_color:
+          - 0
+          - 0
+          - 255
+          brightness_pct: 100
+        action: light.turn_on
+      - target:
+          entity_id:
+          - light.lumiere_canape_2
+          - light.lumiere_salon_entree
+        data:
+          kelvin: 2000
+          brightness_pct: 10
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: Scene_FullWhite
+      sequence:
+      - target:
+          entity_id:
+          - light.lumieres_cuisine
+          - light.lumieres_bar
+          - light.lumiere_salon_tv_2
+          - light.lumiere_canape_2
+          - light.lumiere_salon_entree
+          - light.light_yaya_salon_2
+        data:
+          brightness_pct: 100
+          color_temp_kelvin: 4000
+        action: light.turn_on
+      - target:
+          entity_id:
+          - switch.salle_a_manger
+          - switch.lampe_evier
+        action: switch.turn_on
+    - conditions:
+      - condition: trigger
+        id: Scene_Cozy
+      sequence:
+      - target:
+          entity_id: light.lumieres_cuisine
+        action: light.turn_off
+      - target:
+          entity_id:
+          - light.lumieres_bar
+          - light.lumiere_salon_tv_2
+          - light.lumiere_canape_2
+          - light.lumiere_salon_entree
+          - light.light_yaya_salon_2
+        data:
+          brightness_pct: 25
+          color_temp_kelvin: 2200
+        action: light.turn_on
+      - target:
+          entity_id: switch.salle_a_manger
+        action: switch.turn_on
+    - conditions:
+      - condition: trigger
+        id: Mode_Cinema
+      sequence:
+      - target:
+          entity_id:
+          - light.lumieres_cuisine
+          - light.lumieres_bar
+          - switch.salle_a_manger
+          - switch.lampe_evier
+          - light.lumiere_salon_entree
+          - light.light_yaya_salon_2
+        action: homeassistant.turn_off
+      - target:
+          entity_id:
+          - light.lumiere_salon_tv_2
+          - light.lumiere_canape_2
+        data:
+          brightness_pct: 10
+          color_temp_kelvin: 2200
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: Mode_Nuit
+      sequence:
+      - target:
+          entity_id:
+          - light.lumieres_cuisine
+          - light.lumieres_bar
+          - switch.salle_a_manger
+          - switch.lampe_evier
+          - light.lumiere_salon_tv_2
+          - light.lumiere_canape_2
+          - light.light_yaya_salon_2
+        action: homeassistant.turn_off
+      - target:
+          entity_id: light.lumiere_salon_entree
+        data:
+          brightness_pct: 5
+          color_temp_kelvin: 2000
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: All_Off
+      sequence:
+      - target:
+          entity_id:
+          - light.lumieres_cuisine
+          - light.lumieres_bar
+          - switch.salle_a_manger
+          - switch.lampe_evier
+          - light.lumiere_salon_tv_2
+          - light.lumiere_canape_2
+          - light.lumiere_salon_entree
+          - light.light_yaya_salon_2
+        action: homeassistant.turn_off
+  mode: restart
