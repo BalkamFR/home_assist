@@ -6,7 +6,7 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 21:37:02 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/14 04:27:38 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/15 23:12:42 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,15 @@
 int	main(void)
 {
 	int		fd1;
+	int		line_board;
+	int		line_config;
 	int		fd2;
 	char	*line1;
 	char	*line2;
 	t_list	*config;
 	t_list	*board;
+	line_config = 0;
+	line_board = 0;
 
 	fd1 = open("files/lovelace", O_RDONLY);
 	fd2 = open("files/config.yaml", O_RDONLY);
@@ -40,11 +44,19 @@ int	main(void)
 		if (!line1 && !line2)
 			break ;
 		if (line1)
+		{
 			ft_lstadd_front(&board, ft_lstnew(line1));
+			board->line = line_board;
+			line_board++;		
+		}
 		if (line2)
+		{
 			ft_lstadd_front(&config, ft_lstnew(line2));
+			config->line = line_config;		
+			line_config++;
+		}
 	}
-	printf("%s", ft_create_entity(config, board, "HK Cuisine V2", "Cuisine & Salon"));
+	ft_create_entity(config, board, "HK Cuisine V2", "salon");
 	ft_lstclear(&config, free);
 	ft_lstclear(&board, free);
 	close(fd1);

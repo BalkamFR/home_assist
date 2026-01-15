@@ -1,4 +1,4 @@
-NAME = gnl
+NAME = home_assitant
 
 CC = cc
 CFLAGS = 

@@ -6,7 +6,7 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 10:57:18 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/14 03:33:10 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/15 21:50:15 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 #  define BUFFER_FILES 1024
 # endif
 
+
+int	ft_strlen(const char *tab);
 char	*get_next_line(int fd);
 char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strchr(const char *s);

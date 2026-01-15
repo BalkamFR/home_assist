@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bonus.c                                         :+:      :+:    :+:   */
+/*   liste_chainer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 17:06:31 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/14 03:28:12 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/15 23:07:25 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,27 @@ t_list	*ft_lstnew(void *content)
 	if (!new_node)
 		return (NULL);
 	new_node->content = content;
+	new_node->line = 0;
+	new_node->title_config = NULL;
+	new_node->type = NULL;
+	new_node->title_home = NULL;
+	new_node->next = NULL;
+	return (new_node);
+}
+
+t_list	*ft_lstnew_entity(void *content, char *title_home, char *title_config,
+		char *type)
+{
+	t_list	*new_node;
+
+	new_node = malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->line = 0;
+	new_node->type = type;
+	new_node->title_home = title_home;
+	new_node->title_config = title_config;
 	new_node->next = NULL;
 	return (new_node);
 }
@@ -78,8 +99,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		tmp = tmp->next;
 	tmp->next = new;
 }
-
-
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
