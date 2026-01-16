@@ -1,0 +1,219 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+cover:
+  - platform: template
+    covers:
+      volet_pacome_force:
+        friendly_name: "Volet All"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C1
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C1
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C1
+            automatic_add: false
+      volet_salon_force:
+        friendly_name: "Volet Salon"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C9
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C9
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C9
+            automatic_add: false
+      volet_pierre_force:
+        friendly_name: "Volet Pierre"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C2
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C2
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C2
+            automatic_add: false
+      volet_hanae_force:
+        friendly_name: "Volet Hanae"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C3
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C3
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C3
+            automatic_add: false
+      volet_sacha_force:
+        friendly_name: "Volet Sacha"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C4
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C4
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C4
+            automatic_add: false
+      volet_cuisine_force:
+        friendly_name: "Volets Cuisine"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C8
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C8
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C8
+            automatic_add: false
+      volet_ami_force:
+        friendly_name: "Volet chambre ami"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C7
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C7
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C7
+            automatic_add: false
+      volet_ami2_force:
+        friendly_name: "Volet chambre ami2"
+        device_class: shutter
+        open_cover:
+          action: rfplayer.send_command
+          data:
+            command: "ON"
+            protocol: X2DSHUTTER
+            device_address: C6
+            automatic_add: false
+        close_cover:
+          action: rfplayer.send_command
+          data:
+            command: "OFF"
+            protocol: X2DSHUTTER
+            device_address: C6
+            automatic_add: false
+        stop_cover:
+          action: rfplayer.send_command
+          data:
+            command: "STOP"
+            protocol: X2DSHUTTER
+            device_address: C6
+            automatic_add: false
+
+  - name: HK Cuisine V2
+  - port: 
+    filter:
+      include_entities:
+        - light.spot_bureau_3
+        - light.spot_bureau_2
+        - light.0x403059fffef097e2
+        - light.0xa46dd4fffe677161
+        - light.0x94deb8fffeb20706
+        - light.lumiere_dressing
+        - light.chambre_pierre
+        - media_player.chambre_pierre
+
