@@ -6,7 +6,7 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 17:06:31 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/16 02:13:30 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/16 02:22:17 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ t_list	*ft_lstnew(void *content)
 	new_node->title_config = NULL;
 	new_node->type = NULL;
 	new_node->title_home = NULL;
+	new_node->port = NULL;
 	new_node->next = NULL;
 	return (new_node);
 }
@@ -119,7 +120,16 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (tmp)
 	{
 		next = tmp->next;
-		del(tmp->content);
+		if (tmp->content)
+			del(tmp->content);
+		if (tmp->port)
+			del(tmp->port);
+		if (tmp->title_config)
+			del(tmp->title_config);
+		if (tmp->title_home)
+			del(tmp->title_home);
+		if (tmp->title_home)
+			del(tmp->title_home);
 		free(tmp);
 		tmp = next;
 	}
