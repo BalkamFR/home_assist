@@ -290,7 +290,7 @@ homekit:
         - switch.radiateur_chiara
 
   # --- PONT 8 : SDB HAUT ---
-  - name: HK SDB Haut
+  - name: HK Chiara
     port: 21071
     filter:
       include_entities:

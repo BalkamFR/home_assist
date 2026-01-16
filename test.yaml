@@ -203,9 +203,29 @@ cover:
             protocol: X2DSHUTTER
             device_address: C6
             automatic_add: false
+homekit:
+  - name: Cuisine
+  - port: 2006
+    filter:
+      include_entities:
+        - switch.salle_a_manger
+        - switch.lampe_evier
+        - light.lumieres_bar
+        - light.lumieres_cuisine
+        - media_player.piece_a_vivre
 
-  - name: HK Cuisine V2
-  - port: 
+  - name: Salon
+  - port: 2012
+    filter:
+      include_entities:
+        - switch.salle_a_manger
+        - switch.lampe_evier
+        - light.lumieres_bar
+        - light.lumieres_cuisine
+        - media_player.piece_a_vivre
+
+  - name: Chambre Pierre
+  - port: 2021
     filter:
       include_entities:
         - light.spot_bureau_3
@@ -216,4 +236,84 @@ cover:
         - light.lumiere_dressing
         - light.chambre_pierre
         - media_player.chambre_pierre
+
+  - name: Chambre Sacha
+  - port: 2024
+    filter:
+      include_entities:
+        - cover.volet_sacha_force
+        - light.lumiere_sacha
+
+  - name: Chambre Hanaé
+  - port: 2027
+    filter:
+      include_entities:
+        - cover.volet_hanae_force
+        - light.plafond_hanae
+
+  - name: Chambre Chiara
+  - port: 2031
+    filter:
+      include_entities:
+        - light.lumiere_chiara_3
+        - light.lumiere_chiara_2
+        - light.lumiere_chiara_1
+
+  - name: Salles de Bain
+  - port: 2037
+    filter:
+      include_entities:
+        - light.lumiere_sdb_bas_miroir
+        - light.lumiere_sdb_bas
+        - light.sdb_haut_2
+        - light.sdb_haut
+        - media_player.salle_de_bain
+
+  - name: Buanderie
+  - port: 2039
+    filter:
+      include_entities:
+        - light.0xf0d1b800001b0f66
+
+  - name: Cinéma
+  - port: 2046
+    filter:
+      include_entities:
+        - light.video_projecteur_3
+        - light.video_projecteur_2
+        - light.video_projecteur_1
+        - switch.radiateur_home_cinema
+        - light.salle_de_jeux
+        - media_player.home_cinema
+
+  - name: Ami 1
+  - port: 2051
+    filter:
+      include_entities:
+        - cover.volet_ami2_force
+        - light.lumiere_chambre_ami_2
+        - switch.x2d_a1
+        - cover.volet_ami_force
+
+  - name: Pacome
+  - port: 2059
+    filter:
+      include_entities:
+        - sensor.0xa4c138e86f6207da_temperature
+        - switch.radiateur_pacome
+        - light.switch_pacome
+        - light.lampe_yaya_de_pacome
+        - light.meuble_pacome_2
+        - cover.volet_pacome_force
+        - light.bureau_pacome
+
+  - name: Divers
+  - port: 2065
+    filter:
+      include_entities:
+        - light.lumiere_5
+        - light.lumiere_3
+        - light.inter_bas_couloir_haut
+        - light.escalier_bas
+        - light.inter_couloir
 

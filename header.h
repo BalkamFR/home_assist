@@ -6,7 +6,7 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 03:00:33 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/16 01:03:53 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/16 02:07:31 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,10 @@ t_list				*ft_create_entity_brut(t_list *board, char *name_board,
 void				format_data(t_list *entity_brut, char *name_files);
 char				*ft_addback(char *source, char *line);
 char				*ft_return_line_number(t_list *board, int line);
-char				*ft_create_entity(t_list *config, t_list *board,
-						char *name_config, char *name_board, char *name_files);
+char				*ft_create_entity(t_list *board, char *name_board,
+						char *name_files);
 t_list				*transforme_files_on_list(char *name_files);
 void				create_new_files(void);
 t_list				*reforme_files(char *name_files);
+char				*ft_itoa(int n);
 #endif

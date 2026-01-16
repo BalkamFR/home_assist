@@ -6,7 +6,7 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 00:27:45 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/16 00:50:46 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/16 02:15:14 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,23 @@ char	*extract_data_type(char *brut, char sep)
 	int		len;
 	int		i;
 
+	if (!brut)
+		return (NULL);
 	len = 0;
 	i = 0;
-	while (brut[len] != sep)
+	while (brut[len] && brut[len] != sep)
 		len++;
+	if (brut[len] == '\0')
+	{
+		free(brut);
+		return (NULL);
+	}
 	data_clean = malloc(len + 1);
 	if (!data_clean)
+	{
+		free(brut);
 		return (NULL);
+	}
 	while (brut[i] != sep)
 	{
 		data_clean[i] = brut[i];
@@ -77,6 +87,8 @@ t_list	*ft_create_entity_brut(t_list *board, char *name_board,
 	int		a;
 	char	*line;
 	t_list	*entity;
+	char	*raw_val;
+	char	*type_val;
 
 	entity = NULL;
 	a = 0;
@@ -92,9 +104,14 @@ t_list	*ft_create_entity_brut(t_list *board, char *name_board,
 				if (ft_strcmp("\"title\"", line) == 1)
 					return (entity);
 				if (ft_strcmp("\"entity\"", line) == 1)
-					ft_lstadd_front(&entity, ft_lstnew_entity(extract_data(line,
-								'"'), name_board, name_config,
-							extract_data_type(extract_data(line, '"'), '.')));
+				{
+					raw_val = extract_data(line, '"');
+					type_val = extract_data_type(raw_val, '.');
+					if (type_val != NULL)
+						ft_lstadd_front(&entity,
+							ft_lstnew_entity(extract_data(line, '"'),
+								name_board, name_config, type_val));
+				}
 				a++;
 			}
 		}
@@ -107,7 +124,6 @@ t_list	*ft_create_entity_brut(t_list *board, char *name_board,
 
 void	format_data(t_list *entity_brut, char *name_files)
 {
-
 	if (!entity_brut)
 		return ;
 	write_on_files(name_files, "  - name: ", entity_brut->title_config);
@@ -124,12 +140,12 @@ void	format_data(t_list *entity_brut, char *name_files)
 	}
 	write_on_files(name_files, "\n", NULL);
 }
-char	*ft_create_entity(t_list *config, t_list *board, char *name_config, char *name_board, char *name_files)
+char	*ft_create_entity(t_list *board, char *name_board, char *name_files)
 {
 	t_list	*entity_brut;
 
 	entity_brut = NULL;
-	entity_brut = ft_create_entity_brut(board, name_board, name_config);
+	entity_brut = ft_create_entity_brut(board, name_board, name_board);
 	format_data(entity_brut, name_files);
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 10:57:23 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/15 21:50:08 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/16 01:59:33 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_strlen(const char *tab)
 {
 	int	i;
 
+	if (!tab)
+		return(0);	
 	i = 0;
 	if (!tab)
 		return (0);

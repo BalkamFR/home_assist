@@ -6,7 +6,7 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 00:31:09 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/16 01:07:18 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/16 02:15:37 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,27 @@
 void	create_new_files(void)
 {
 	t_list	*config;
-	t_list	*config2;
 	t_list	*board;
+	char	*files_edit;
 
-	config = transforme_files_on_list("files/config.yaml");
-	config2 = reforme_files("files/config.yaml");
+	files_edit = "test.yaml";
+	config = reforme_files(files_edit);
 	board = transforme_files_on_list("files/lovelace");
-	remplace_all_files("test.txt", config2);
-	ft_create_entity(config, board, "HK Cuisine V2", "Pierre", "test.txt");
+	remplace_all_files(files_edit, config);
+	write_on_files(files_edit, "homekit:\n", NULL);
+	ft_create_entity(board, "Cuisine", files_edit);
+	ft_create_entity(board, "Salon", files_edit);
+	ft_create_entity(board, "Chambre Pierre", files_edit);
+	ft_create_entity(board, "Chambre Sacha", files_edit);
+	ft_create_entity(board, "Chambre Hanaé", files_edit);
+	ft_create_entity(board, "Chambre Chiara", files_edit);
+	ft_create_entity(board, "Salles de Bain", files_edit);
+	ft_create_entity(board, "Buanderie", files_edit);
+	ft_create_entity(board, "Cinéma", files_edit);
+	ft_create_entity(board, "Ami 1", files_edit);
+	ft_create_entity(board, "Pacome", files_edit);
+	ft_create_entity(board, "Divers", files_edit);
 	ft_lstclear(&config, free);
-	ft_lstclear(&config2, free);
 	ft_lstclear(&board, free);
 }
 

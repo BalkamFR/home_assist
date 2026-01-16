@@ -6,7 +6,7 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 17:06:31 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/15 23:07:25 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/16 02:13:30 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ t_list	*ft_lstnew_entity(void *content, char *title_home, char *title_config,
 		char *type)
 {
 	t_list	*new_node;
-
+	char	*nbrconvert;
+	static int portnbr = 2000;
+	portnbr ++;
+	nbrconvert = ft_itoa(portnbr);
 	new_node = malloc(sizeof(t_list));
 	if (!new_node)
 		return (NULL);
@@ -41,6 +44,7 @@ t_list	*ft_lstnew_entity(void *content, char *title_home, char *title_config,
 	new_node->type = type;
 	new_node->title_home = title_home;
 	new_node->title_config = title_config;
+	new_node->port = nbrconvert;
 	new_node->next = NULL;
 	return (new_node);
 }

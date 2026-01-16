@@ -6,11 +6,11 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 15:26:44 by papilaz           #+#    #+#             */
-/*   Updated: 2025/11/23 18:44:54 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/16 02:06:41 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "header.h"
 
 static int	ft_compt_all_number(long n)
 {
