@@ -6,7 +6,7 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 00:31:09 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/16 02:15:37 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/16 03:39:47 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	create_new_files(void)
 	t_list	*board;
 	char	*files_edit;
 
-	files_edit = "test.yaml";
+	files_edit = "../configuration.yaml";
 	config = reforme_files(files_edit);
-	board = transforme_files_on_list("files/lovelace");
+	board = transforme_files_on_list("../../config/.storage/lovelace");
 	remplace_all_files(files_edit, config);
 	write_on_files(files_edit, "homekit:\n", NULL);
 	ft_create_entity(board, "Cuisine", files_edit);
