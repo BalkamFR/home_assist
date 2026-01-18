@@ -6,7 +6,7 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 03:00:33 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/16 02:07:31 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/18 20:12:45 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include "get_next_line/get_next_line_bonus.h"
 # include <string.h>
 # include <unistd.h>
+
+# ifndef PORT_DEVICES
+#  define PORT_DEVICES 2000
+# endif
 
 typedef struct s_list
 {
@@ -63,4 +67,8 @@ t_list				*transforme_files_on_list(char *name_files);
 void				create_new_files(void);
 t_list				*reforme_files(char *name_files);
 char				*ft_itoa(int n);
+char				*return_info_file(char *file, char *name);
+void				ft_lstclear_one(t_list **lst);
+void	ft_parce_and_create_piece(t_list *files_config, t_list *files_config2, char *path_file);
+						
 #endif

@@ -6,7 +6,7 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 02:50:21 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/16 00:29:55 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/17 18:30:46 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	ft_strcmp(char *name_board, char *board_content)
 	int	a;
 	int	len1;
 
+	if (!name_board || !board_content)
+		return(0);	
 	len1 = ft_strlen(name_board);
 	i = 0;
 	a = 0;

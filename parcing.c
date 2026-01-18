@@ -6,7 +6,7 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 00:31:09 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/16 02:15:37 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/18 20:13:46 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,20 @@ void	create_new_files(void)
 {
 	t_list	*config;
 	t_list	*board;
-	char	*files_edit;
+	char	*path_config;
+	char	*path_board;
 
-	files_edit = "test.yaml";
-	config = reforme_files(files_edit);
-	board = transforme_files_on_list("files/lovelace");
-	remplace_all_files(files_edit, config);
-	write_on_files(files_edit, "homekit:\n", NULL);
-	ft_create_entity(board, "Cuisine", files_edit);
-	ft_create_entity(board, "Salon", files_edit);
-	ft_create_entity(board, "Chambre Pierre", files_edit);
-	ft_create_entity(board, "Chambre Sacha", files_edit);
-	ft_create_entity(board, "Chambre Hanaé", files_edit);
-	ft_create_entity(board, "Chambre Chiara", files_edit);
-	ft_create_entity(board, "Salles de Bain", files_edit);
-	ft_create_entity(board, "Buanderie", files_edit);
-	ft_create_entity(board, "Cinéma", files_edit);
-	ft_create_entity(board, "Ami 1", files_edit);
-	ft_create_entity(board, "Pacome", files_edit);
-	ft_create_entity(board, "Divers", files_edit);
+	path_config = return_info_file("config_file.json", "config");
+	path_board = return_info_file("config_file.json", "home");
+	config = reforme_files(path_config);
+	board = transforme_files_on_list(path_board);
+	remplace_all_files(path_config, config);
+	
+	write_on_files(path_config, "homekit:\n", NULL);
+	ft_parce_and_create_piece(board, board, path_config);
+	
+	free(path_config);
+	free(path_board);
 	ft_lstclear(&config, free);
 	ft_lstclear(&board, free);
 }
@@ -95,4 +90,23 @@ t_list	*reforme_files(char *name_files)
 	}
 	close(fd1);
 	return (list_transform);
+}
+
+void	ft_parce_and_create_piece(t_list *files_config, t_list *files_config2, char *path_file)
+{
+	char	*new;
+
+	new = NULL;
+	while (files_config)
+	{
+		if (ft_strcmp("\"title\"", files_config->content) == 1
+			&& ft_strcmp("debug", files_config->content) == 0
+			&& ft_strcmp("Maison Mushroom", files_config->content) == 0
+			&& ft_strcmp("Vue Design", files_config->content) == 0)
+		{
+			new = extract_data(files_config->content, '"');
+			ft_create_entity(files_config2, new, path_file);
+		}
+		files_config = files_config->next;
+	}
 }

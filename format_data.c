@@ -6,11 +6,33 @@
 /*   By: papilaz <papilaz@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 00:27:45 by papilaz           #+#    #+#             */
-/*   Updated: 2026/01/16 02:15:14 by papilaz          ###   ########.fr       */
+/*   Updated: 2026/01/18 20:50:17 by papilaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
+
+char	*return_info_file(char *file, char *name)
+{
+	char	*line;
+	char	*name_extract;
+	int		fd;
+
+	fd = 0;
+	fd = open(file, O_RDONLY);
+	if (fd <= 0)
+		return (NULL);
+	while (1)
+	{
+		line = get_next_line(fd);
+		if (!line || ft_strcmp(name, line))
+			break ;
+		free(line);
+	}
+	name_extract = extract_data(line, '"');
+	free(line);
+	return (name_extract);
+}
 
 char	*extract_data(char *brut, char sep)
 {
@@ -40,7 +62,7 @@ char	*extract_data(char *brut, char sep)
 	{
 		if (brut[i] == sep)
 			count++;
-		if (count == 3 && brut[i] != sep)
+		if (count == 3 && brut[i] != sep /*&& brut[i] >= 1 && brut[i] <= 126*/)
 			data_clean[len++] = brut[i];
 		i++;
 	}
@@ -130,6 +152,8 @@ void	format_data(t_list *entity_brut, char *name_files)
 	write_on_files(name_files, "\n  - port: ", entity_brut->port);
 	write_on_files(name_files, "\n    filter:\n      include_entities:\n",
 		NULL);
+	printf("%s\n", entity_brut->title_home);
+	printf("  - port: %s\n", entity_brut->port);
 	entity_brut = entity_brut->next;
 	while (entity_brut)
 	{
@@ -142,10 +166,15 @@ void	format_data(t_list *entity_brut, char *name_files)
 }
 char	*ft_create_entity(t_list *board, char *name_board, char *name_files)
 {
-	t_list	*entity_brut;
+	t_list		*entity_brut;
+	static int	port_static = PORT_DEVICES;
+	char		*port_convert;
 
+	port_static++; 
 	entity_brut = NULL;
 	entity_brut = ft_create_entity_brut(board, name_board, name_board);
+	entity_brut->port = port_convert;
 	format_data(entity_brut, name_files);
+	free(port_convert);
 	return (NULL);
 }

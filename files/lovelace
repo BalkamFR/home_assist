@@ -84,7 +84,7 @@
                     {
                       "type": "custom:mushroom-entity-card",
                       "entity": "switch.lampe_evier",
-                      "name": "Évier",
+                      "name": "evier",
                       "icon": "mdi:water-pump",
                       "tap_action": {
                         "action": "toggle"
@@ -111,7 +111,7 @@
                 {
                   "type": "custom:mushroom-title-card",
                   "title": "Salon",
-                  "subtitle": "Détente"
+                  "subtitle": "Detente"
                 },
                 {
                   "type": "custom:mushroom-media-player-card",
@@ -135,7 +135,7 @@
                     {
                       "type": "custom:mushroom-light-card",
                       "entity": "light.lumiere_canape_2",
-                      "name": "Canapé",
+                      "name": "Canape",
                       "show_brightness_control": true,
                       "use_light_color": true,
                       "show_color_control": true
@@ -151,7 +151,7 @@
                     {
                       "type": "custom:mushroom-light-card",
                       "entity": "light.lumiere_salon_entree",
-                      "name": "Entrée Salon",
+                      "name": "Entree Salon",
                       "icon": "mdi:door-open",
                       "show_brightness_control": true,
                       "use_light_color": true,
@@ -379,7 +379,7 @@
               "cards": [
                 {
                   "type": "custom:mushroom-title-card",
-                  "title": "🌸 Chambre Hanaé"
+                  "title": "🌸 Chambre Hanae"
                 },
                 {
                   "type": "grid",
@@ -405,7 +405,7 @@
                 {
                   "type": "custom:mushroom-light-card",
                   "entity": "light.bande_lumineuse_connectee",
-                  "name": "LED Hanaé",
+                  "name": "LED Hanae",
                   "icon": "mdi:led-strip",
                   "use_light_color": true,
                   "show_brightness_control": true,
@@ -559,7 +559,7 @@
               "cards": [
                 {
                   "type": "custom:mushroom-title-card",
-                  "title": "🎬 Cinéma"
+                  "title": "🎬 Cinema"
                 },
                 {
                   "type": "custom:mushroom-media-player-card",
@@ -577,7 +577,7 @@
                 {
                   "type": "custom:mushroom-entity-card",
                   "entity": "switch.radiateur_home_cinema",
-                  "name": "Chauffage Ciné",
+                  "name": "Chauffage Cine",
                   "icon": "mdi:radiator",
                   "icon_color": "red",
                   "tap_action": {
@@ -622,7 +622,7 @@
               "cards": [
                 {
                   "type": "custom:mushroom-title-card",
-                  "title": "🛏️ Invités"
+                  "title": "🛏️ Invites"
                 },
                 {
                   "type": "grid",
